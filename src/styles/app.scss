@@ -1,6 +1,7 @@
 body{
     margin: 100px;
-    background: #ccc
+    background: #ccc;
+    box-sizing: border-box;
 }
 @import 'common/menu';
 @import 'common/technologies';

@@ -1,10 +1,10 @@
-## Gulp-webpack 2018
+## My Build Gulp 2018
 
-#### Для работы сборки у вас должны быть установлены
+#### For the build to work, you must have installed:
 * npm 5
 * gulp-cli
 
-#### Как установить проект
+#### How install build:
 1. clone this repo
 2. npm i
 3. gulp

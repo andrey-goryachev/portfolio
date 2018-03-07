@@ -13,6 +13,9 @@ const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
 
+const autoprefixer = require('gulp-autoprefixer');
+const imagemin = require('gulp-imagemin');
+
 const paths = {
     root: './build',
     templates: {
@@ -40,14 +43,18 @@ function templates() {
         .pipe(gulp.dest(paths.root));
 }
 
-// scss
+// scss + autoprefixer
 function styles() {
     return gulp.src('./src/styles/app.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(sourcemaps.write())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(paths.styles.dest))
+        .pipe(gulp.dest(paths.styles.dest));
 }
 
 // очистка
@@ -66,7 +73,7 @@ function scripts() {
 function watch() {
     gulp.watch(paths.styles.src, styles);
     gulp.watch(paths.templates.src, templates);
-    gulp.watch(paths.images.src, images);
+    gulp.watch(paths.images.src, minimg);
     gulp.watch(paths.scripts.src, scripts);
 }
 
@@ -78,19 +85,22 @@ function server() {
     browserSync.watch(paths.root + '/**/*.*', browserSync.reload);
 }
 
-// просто переносим картинки
-function images() {
+// сжимаем картинки
+function minimg() {
     return gulp.src(paths.images.src)
+        .pipe (imagemin())
         .pipe(gulp.dest(paths.images.dest));
 }
 
 exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
-exports.images = images;
+exports.minimg = minimg;
+
+
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, scripts),
+    gulp.parallel(styles, templates, minimg, scripts),
     gulp.parallel(watch, server)
 ));
