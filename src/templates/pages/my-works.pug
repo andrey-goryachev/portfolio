@@ -4,5 +4,48 @@ block variables
     - var title = 'Мои работы'
 
 block content
-    h1 Мои работы
-    include ../common/slider.pug
+    h1.work-title Мои работы
+    .works
+        .works-container-left
+            ul.works-desc__list
+                li.works-desc__item
+                    h2.works-desc__title Сайт школы онлайн образования
+                    p.works-desc__text Html, Css, Javascipt
+                    a.works-desc__link(href="https://loftschool.com/") Посмотреть сайт
+                li.works-desc__item
+                    h2.works-desc__title Сайт 2
+                    p.works-desc__text Html, Css, Javascipt
+                    a.works-desc__link(href="yandex.ru") Посмотреть сайт
+                li.works-desc__item
+                    h2.works-desc__title Сайт 3
+                    p.works-desc__text Html, Css, Javascipt
+                    a.works-desc__link(href="vk.com") Посмотреть сайт
+                li.works-desc__item
+                    h2.works-desc__title Сайт 4
+                    p.works-desc__text Html, Css, Javascipt
+                    a.works-desc__link(href="mail.ru") Посмотреть сайт
+        .works-container-right      
+            include ../common/slider.pug
+
+    .comments
+        h2.comments__title Что обо мне говорят
+        ul.comments__list
+            li.comments__item
+                img.comments__photo(src="", alt="")
+                p.comments__item-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                p.comments__item-author Ковальчук Дмитрий — основатель Loftschool
+            li.comments__item
+                img.comments__photo(src="", alt="")
+                p.comments__item-text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                p.comments__item-author Сабанцев Владимир — преподаватель
+        form.comments-form(action="")
+            h2.comments-form__title Связаться со мной
+            input.comments-form__text(type="text", name="")
+            input.comments-form__email(type="email", name="")
+            textarea.comments-form__message(name="", cols="30", rows="10")
+            ul.comments-form__list
+                li.comments-form__item
+                    input.comments-form__btn(type="button", value="Отправить") 
+                li.comments-form__item
+                    input.comments-form__btn(type="button", value="Очистить") 
+    

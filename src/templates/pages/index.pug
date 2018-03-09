@@ -1,13 +1,48 @@
 extends ../template
 
 block variables
-    - var title = 'Добро пожаловать'
+    - var title = 'Горячев Андрей'
 
 block content
-    h1 Главная
-    form
-        label(for="email") email
-        input(name="email" id="email")
-        label(for="password") password
-        input(name="password" id="password")
-        button Войти
+    button.btn-auth Авторизоваться
+    .welcome
+        .photo
+        h2.welcome__title #{name}
+        p.welcome__text #{downNameText}
+        include ../common/social.pug
+        ul.menu-welcome
+            li.menu-welcome__btn
+                a.menu-welcome__linK(href="my-works.html") Мои работы
+            li.menu-welcome__btn
+                a.menu-welcome__linK(href="about.html") Обо мне 
+            li.menu-welcome__btn
+                a.menu-welcome__linK(href="blog.html") Блог
+
+    .auth 
+        h2.auth__title Авторизуйтесь
+        form.form-auth(action="")
+            input.form-auth__text(type="text", name="")
+            input.form-auth__psw(type="password", name="")
+            input.form-auth__check#form-auth__check(type="checkbox", name="") 
+            label.form-auth__check-txt(for="form-auth__check") Я человек
+            p.form-auth__question А вы точно не робот?
+            input.form-auth__radio#form-auth__radio-yes(type="radio", name="youRobot")
+            label(for="form-auth__radio-yes") Да
+            input.form-auth__radio#form-auth__radio-no(type="radio", name="youRobot")
+            label(for="form-auth__radio-no") Не уверен
+            ul.form-auth__list
+                li.form-auth__item
+                    input.form-auth__btn(type="button", value="На главную") 
+                li.form-auth__item
+                    input.form-auth__btn(type="button", value="Войти") 
+            
+            
+
+
+    //- h1 Главная
+    //- form
+    //-     label(for="email") email
+    //-     input(name="email" id="email")
+    //-     label(for="password") password
+    //-     input(name="password" id="password")
+    //-     button Войти

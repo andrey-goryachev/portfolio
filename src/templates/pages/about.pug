@@ -4,5 +4,41 @@ block variables
     - var title = 'Обо мне'
 
 block content
-    h1 Обо мне
-    include ../common/technologies.pug
+    .about
+        .about__block-left
+            .about__title Обо мне
+        .about__block-center
+            .photo-about
+            h2.about__h2 Кто я
+            p.about__text Я веб разработчик из Чехова. Мне 30 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+        .about__block-right
+            h2.about__h2 Чем я могу быть вам полезен
+            p.about__text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
+            ul.diagram
+                li.diagram__item
+                    h3.diagram__item-title Frontend
+                    ul.diagram__pic-list
+                        li.pic-item
+                        li.pic-item
+                        li.pic-item
+                        li.pic-item
+                li.diagram__item
+                    h3.diagram__item-title Backend
+                    ul.diagram__pic-list
+                        li.pic-item
+                        li.pic-item
+                        li.pic-item
+                        li.pic-item
+                li.diagram__item
+                    h3.diagram__item-title WorkFlow
+                    ul.diagram__pic-list
+                        li.pic-item
+                        li.pic-item
+                        li.pic-item
+                        li.pic-item
+    .map
+        .contacts
+            h2.contacts__title Контакты
+            include ../common/contacts.pug
+
+

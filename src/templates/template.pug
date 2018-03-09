@@ -1,4 +1,7 @@
 block variables
+-var name = 'Андрей Горячев'
+-var downNameText = 'Личный сайт веб-разработчика'
+-var footer = 'footer'
 
 doctype html
 html
@@ -12,5 +15,20 @@ html
         link(rel='stylesheet' href='/assets/styles/app.min.css')
         script(src='/assets/scripts/bundle.js' defer)
     body
+        block header
+            header.header
+                .header__up-container
+                    include common/social.pug
+                    .hamburger
+                .photo
+                .header__title #{name}
+                .header__text #{downNameText}
         block content
-        include common/menu.pug
+        block footer
+                footer.footer
+                    .footer__container.footer__container-off
+                        p.footer__description Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+                        include common/menu.pug 
+                        include common/social.pug
+                        include common/contacts.pug
+                    .footer__text © #{name}  | создано с любовью в LoftSchool | 2018
