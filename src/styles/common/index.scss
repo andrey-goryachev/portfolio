@@ -1,0 +1,86 @@
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    background-image: url(../images/welcome-bg.jpg);
+}
+
+.container-welcome {
+    color: #fff;
+    font-family: Roboto-Regular;
+    min-height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 100px 43px 100px;
+}
+
+.auth {
+    display: none;
+}
+
+.btn-auth {
+    color: #fff;
+    font-family: Roboto-Medium;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 12px 28px;
+    align-self: flex-end;
+}
+
+.welcome {
+    width: 380px;
+}
+
+.welcome-wrap {
+    background-color: rgba($color: $gray, $alpha: .5);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+
+.photo {
+    width: 140px;
+    height: 140px;
+    background: url(../images/ava.jpg) no-repeat center center / contain;
+    border-radius: 50%;
+}
+
+.welcome__title {
+    font: 32px Roboto-Medium;
+}
+
+@import 'social.scss';
+
+.menu-welcome {
+    list-style: none;
+    font-family: Roboto-Medium;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.menu-welcome__link {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background-color: $blueLight;
+    &:hover {
+        background-color: $blue;
+    };
+    padding-top: 18px;
+    padding-bottom: 18px;
+    text-align: center;
+    border-right: 2px solid #7296d3;
+}
+
+.footer__text {
+    color: #fff;
+    font: 16px Roboto-Light;
+    text-align: center;
+}

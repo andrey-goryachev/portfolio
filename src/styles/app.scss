@@ -1,8 +1,13 @@
-body{
-    margin: 100px;
-    background: #ccc;
-    box-sizing: border-box;
-}
-@import 'common/menu';
-@import 'common/technologies';
-@import 'common/slider';
+
+// переменные
+@import 'common/variables.scss';
+// шрифты
+@import 'common/fonts.scss';
+
+@import 'common/normalize.scss';
+
+@import 'common/global.scss';
+
+// страница приветствия
+@import 'common/index.scss';
+
