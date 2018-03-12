@@ -91,7 +91,7 @@ function watch() {
     gulp.watch(paths.images.src, minimg);
     gulp.watch(paths.scripts.src, scripts);
     gulp.watch(paths.fonts.src, fonts);
-    gulp.watch(paths.fonts.src, video);
+    //gulp.watch(paths.fonts.src, video);
 }
 
 // переносим шрифты
@@ -100,11 +100,11 @@ function fonts() {
         .pipe(gulp.dest(paths.fonts.dest));
 }
 
-// переносим видео
-function video() {
-    return gulp.src(paths.video.src)
-        .pipe(gulp.dest(paths.video.dest));
-}
+// // переносим видео
+// function video() {
+//     return gulp.src(paths.video.src)
+//         .pipe(gulp.dest(paths.video.dest));
+// }
 
 // локальный сервер + livereload (встроенный)
 function server() {
@@ -119,12 +119,12 @@ exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
 exports.minimg = minimg;
-// exports.fonts = fonts;
+exports.fonts = fonts;
 
 
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, minimg, scripts, fonts, video),
+    gulp.parallel(styles, templates, minimg, scripts, fonts),
     gulp.parallel(watch, server)
 ));
