@@ -7,7 +7,7 @@ block header
 block content
     .wrapper
         button.btn-auth Авторизоваться
-        .welcome
+        .welcome.off
             .welcome-wrap
                 .photo
                 h2.welcome__title #{name}
@@ -21,23 +21,31 @@ block content
                 li.menu-welcome__btn
                     a.menu-welcome__link(href="blog.html") Блог
 
-        .auth.active 
+        .auth
             h2.auth__title Авторизуйтесь
             form.form-auth(action="")
-                input.form-auth__text(type="text", name="")
-                input.form-auth__psw(type="password", name="")
-                input.form-auth__check#form-auth__check(type="checkbox", name="") 
-                label.form-auth__check-txt(for="form-auth__check") Я человек
-                p.form-auth__question А вы точно не робот?
-                input.form-auth__radio#form-auth__radio-yes(type="radio", name="youRobot")
-                label(for="form-auth__radio-yes") Да
-                input.form-auth__radio#form-auth__radio-no(type="radio", name="youRobot")
-                label(for="form-auth__radio-no") Не уверен
-                ul.form-auth__list
-                    li.form-auth__item
-                        input.form-auth__btn(type="button", value="На главную") 
-                    li.form-auth__item
-                        input.form-auth__btn(type="button", value="Войти") 
+                .form-auth__wrap-pic
+                    svg.form-auth__pic(width="45" height="45")
+                        use(xlink:href="./assets/sprites/sprite.svg#login") 
+                    input.form-auth__txt(type="text", name="", placeholder="Логин")
+                .form-auth__wrap-pic
+                    svg.form-auth__pic(width="45" height="45")
+                        use(xlink:href="./assets/sprites/sprite.svg#password") 
+                    input.form-auth__txt(type="password", name="" placeholder="Пароль")
+                .form-auth__wrap-check
+                    input.form-auth__check#form-auth__check(type="checkbox", name="") 
+                    label.form-auth__check-txt(for="form-auth__check") Я человек
+                .form-auth__question А вы точно не робот?
+                .form-auth__wrap-radio
+                    input.form-auth__radio#form-auth__radio-yes(type="radio", name="youRobot")
+                    label.form-auth__radio-txt(for="form-auth__radio-yes") Да
+                    input.form-auth__radio#form-auth__radio-no(type="radio", name="youRobot")
+                    label.form-auth__radio-txt(for="form-auth__radio-no") Не уверен
+                ul.form-auth__btn-list
+                    li.form-auth__btn-item
+                        a.form-auth__btn-link(href="") На главную 
+                    li.form-auth__btn-item
+                        a.form-auth__btn-link(href="") Войти 
         footer.footer    
             .footer__text © #{name}  | создано с любовью в LoftSchool | 2018  
         block footer      

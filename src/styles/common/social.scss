@@ -4,30 +4,22 @@
     padding: 0;
     margin: 0;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social__item {
+
 }
 
 .social__link {
     display: block;
-    background-image: url(../images/icons.svg);
-    background-repeat: no-repeat;
-    background-color: transparent;
 }
-
-.social__link-vk {
-    background-position: 0 -2520px;
-    width:30px;
-    height:17px;
-}
-.social__link-git {
-    background-position: 0 -1073px;
-    width:26px;
-    height:22px;
-}
-.social__link-in {
-    background-position: 0 -1180px;
-    width:24px;
-    height:23px;
+.social__pic {
+    fill: $blueLight;
+    width: 30px;
+    height: 30px;
+    &:hover {
+        fill: $blue;
+    }
 }
