@@ -15,6 +15,22 @@ const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
 
 const imagemin = require('gulp-imagemin');
+const svgSprite = require('gulp-svg-sprite');
+const svgmin = require('gulp-svgmin');
+const cheerio = require('gulp-cheerio');
+const replace = require('gulp-replace');
+
+const config = {
+    mode: {
+        symbol: {
+            sprite: "../sprite.svg",
+            example: {
+                dest: '../tmp/spriteSvgDemo.html' // демо html
+            }
+        }
+    }
+};
+
 
 const paths = {
     root: './build',
@@ -29,6 +45,10 @@ const paths = {
     images: {
         src: 'src/images/**/*.*',
         dest: 'build/assets/images/'
+    },
+    icons: {
+        src: 'src/icons/*.svg*',
+        dest: 'build/assets/sprites/'
     },
     scripts: {
         src: 'src/scripts/**/*.js',
@@ -77,6 +97,33 @@ function minimg() {
         .pipe(gulp.dest(paths.images.dest));
 }
 
+// делаем спрайты
+function sprite() {
+    return gulp.src(paths.icons.src)
+        // минифицируем svg
+        // .pipe(svgmin({
+        //     js2svg: {
+        //         pretty: true
+        //     }
+        // })
+        // удаляем все атрибуты fill, style and stroke в фигурах
+        .pipe(cheerio({
+            run: function ($) {
+                $('[fill]').removeAttr('fill');
+                $('[stroke]').removeAttr('stroke');
+                $('[style]').removeAttr('style');
+            },
+            parserOptions: {
+                xmlMode: true
+            }
+        }))
+        // cheerio плагин заменит, если появилась, скобка '&gt;', на нормальную.
+        .pipe(replace('&gt;', '>'))
+        // build svg sprite
+        .pipe(svgSprite(config))
+        .pipe(gulp.dest(paths.icons.dest));
+};
+
 // webpack
 function scripts() {
     return gulp.src('src/scripts/app.js')
@@ -91,7 +138,8 @@ function watch() {
     gulp.watch(paths.images.src, minimg);
     gulp.watch(paths.scripts.src, scripts);
     gulp.watch(paths.fonts.src, fonts);
-    //gulp.watch(paths.fonts.src, video);
+    gulp.watch(paths.icons.src, sprite);
+    //gulp.watch(paths.video.src, video);
 }
 
 // переносим шрифты
@@ -120,11 +168,12 @@ exports.styles = styles;
 exports.clean = clean;
 exports.minimg = minimg;
 exports.fonts = fonts;
+exports.sprite = sprite;
 
 
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, minimg, scripts, fonts),
+    gulp.parallel(styles, templates, minimg, scripts, fonts, sprite),
     gulp.parallel(watch, server)
 ));
