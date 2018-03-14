@@ -8,6 +8,15 @@
 
 @import './common/global.scss';
 
-// страница приветствия
-@import './common/index.scss';
+// отдельные блоки
+@import './common/header.scss';
+@import './common/contacts.scss';
+@import './common/menu.scss';
+@import './common/footer.scss';
+
+// страницы сайта
+@import './pages/index.scss';
+@import './pages/about.scss';
+@import './pages/blog.scss';
+@import './pages/my-works.scss';
 

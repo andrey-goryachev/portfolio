@@ -2,12 +2,12 @@ extends ../template
 
 block variables
     - var title = 'Горячев Андрей'
-block header
+
 
 block content
     .wrapper
         button.btn-auth Авторизоваться
-        .welcome.off
+        .welcome
             .welcome-wrap
                 .photo
                 h2.welcome__title #{name}
@@ -47,5 +47,5 @@ block content
                     li.form-auth__btn-item
                         a.form-auth__btn-link(href="") Войти 
         footer.footer    
-            .footer__text © #{name}  | создано с любовью в LoftSchool | 2018  
-        block footer      
+            .footer__text_index © #{name}  | создано с любовью в LoftSchool | 2018  
+            

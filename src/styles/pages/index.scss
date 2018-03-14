@@ -57,7 +57,7 @@
     margin-bottom: 30px;
 }
 
-@import 'social.scss';
+@import '../common/social.scss';
 
 .menu-welcome {
     list-style: none;
@@ -183,9 +183,4 @@
     box-sizing: border-box;
 }
 
-// footer
-.footer__text {
-    color: #fff;
-    font: 16px Roboto-Light;
-    text-align: center;
-}
+@import '../common/footer.scss';

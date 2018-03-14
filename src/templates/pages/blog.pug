@@ -2,6 +2,10 @@ extends ../template
 
 block variables
     - var title = 'Блог'
+    - var name = 'Блог'
+    - var downNameText = 'Статьи которые я написал'
+
+    include ../common/header.pug
 
 block content
     .blog
@@ -32,3 +36,5 @@ block content
                 h2.blog__item-title
                 p.blog__item-date
                 p.blog__item-text
+
+    include ../common/footer.pug

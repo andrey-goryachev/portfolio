@@ -1,0 +1,38 @@
+
+.footer__container {
+    font: 16px Roboto-Light;
+    display: flex;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer__description {
+    flex: 1;
+}
+.footer__description-text {
+    width: 85%;
+}
+.footer__block-center { 
+    flex: 1;
+}
+.contacts__list_footer {
+    flex: 1;
+}
+.contacts__item_footer{
+    display: block;
+    margin-bottom: 10px;
+}
+.footer__text_main {
+    background-color: $blueLight;
+    color: #fff;
+    padding: 15px;
+    font: 16px Roboto-Light;
+    text-align: center;
+}
+.footer__text_index {
+    color: #fff;
+    font: 16px Roboto-Light;
+    text-align: center;
+}

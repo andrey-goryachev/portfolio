@@ -2,19 +2,25 @@ extends ../template
 
 block variables
     - var title = 'Обо мне'
+    - var name = 'Андрей Горячев'
+    - var downNameText = 'Личный сайт веб-разработчика'
+
+
+    include ../common/header.pug
 
 block content
     .about
-        .about__block-left
+        .about__block-title
             .about__title Обо мне
-        .about__block-center
-            .photo-about
+        .photo.photo_about
+        .about__block-whois
             h2.about__h2 Кто я
             p.about__text Я веб разработчик из Чехова. Мне 30 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
-        .about__block-right
+            p.about__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+        .about__block-skills
             h2.about__h2 Чем я могу быть вам полезен
             p.about__text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
-            ul.diagram
+            ul.diagram-list
                 li.diagram__item
                     h3.diagram__item-title Frontend
                     ul.diagram__pic-list
@@ -38,7 +44,8 @@ block content
                         li.pic-item
     .map
         .contacts
-            h2.contacts__title Контакты
+            h2.about__h2 Контакты
             include ../common/contacts.pug
+    include ../common/footer.pug
 
 

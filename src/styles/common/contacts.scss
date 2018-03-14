@@ -1,0 +1,12 @@
+.contacts__list {
+    list-style: none;
+    font: 16px Roboto-Medium;
+    padding: 0;
+    margin: 0;
+}
+.contacts__item {
+    display: inline-block;
+    width: 49%;
+    padding: 15px;
+    box-sizing: border-box;
+}
