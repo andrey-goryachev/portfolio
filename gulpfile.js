@@ -100,27 +100,27 @@ function minimg() {
 // делаем спрайты
 function sprite() {
     return gulp.src(paths.icons.src)
-        // минифицируем svg
-        // .pipe(svgmin({
-        //     js2svg: {
-        //         pretty: true
-        //     }
-        // })
-        // удаляем все атрибуты fill, style and stroke в фигурах
-        .pipe(cheerio({
-            run: function ($) {
-                $('[fill]').removeAttr('fill');
-                $('[stroke]').removeAttr('stroke');
-                $('[style]').removeAttr('style');
-            },
-            parserOptions: {
-                xmlMode: true
-            }
-        }))
-        // cheerio плагин заменит, если появилась, скобка '&gt;', на нормальную.
-        .pipe(replace('&gt;', '>'))
-        // build svg sprite
-        .pipe(svgSprite(config))
+//         // минифицируем svg
+//         // .pipe(svgmin({
+//         //     js2svg: {
+//         //         pretty: true
+//         //     }
+//         // })
+//         // удаляем все атрибуты fill, style and stroke в фигурах
+//         .pipe(cheerio({
+//             run: function ($) {
+//                 $('[fill]').removeAttr('fill');
+//                 $('[stroke]').removeAttr('stroke');
+//                 $('[style]').removeAttr('style');
+//             },
+//             parserOptions: {
+//                 xmlMode: true
+//             }
+//         }))
+//         // cheerio плагин заменит, если появилась, скобка '&gt;', на нормальную.
+//         .pipe(replace('&gt;', '>'))
+//         // build svg sprite
+//         .pipe(svgSprite(config))
         .pipe(gulp.dest(paths.icons.dest));
 };
 

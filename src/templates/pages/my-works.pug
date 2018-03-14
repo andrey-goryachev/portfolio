@@ -4,38 +4,67 @@ block variables
     - var title = 'Мои работы'
 
 block content
-    h1.work-title Мои работы
+    header.header
+        .header__socials
+            ul.social
+                li.social__item
+                    a.social__link.social__link-vk(href="https://vk.com/ag_888")
+                li.social__item
+                    a.social__link.social__link-git(href="https://github.com/andrey-goryachev")
+                li.social__item
+                    a.social__link.social__link-in(href="https://github.com/andrey-goryachev")
+        .header__title
+            .header__user.user
+                .user__pic
+                    img(src="./assets/images/ava.jpg", alt="My photo").user__pic-img
+                .user__description
+                    .user__name #{name}
+                    .user__info #{downNameText}
+        .header__menu.hamburger
+        .header__figure.stars_1
+        .header__scroll-btn.arrow-down
     .works
         .works-container-left
             ul.works-desc__list
-                li.works-desc__item
+                li.works-desc__item.works-desc__item-active
                     h2.works-desc__title Сайт школы онлайн образования
                     p.works-desc__text Html, Css, Javascipt
                     a.works-desc__link(href="https://loftschool.com/") Посмотреть сайт
                 li.works-desc__item
                     h2.works-desc__title Сайт 2
                     p.works-desc__text Html, Css, Javascipt
-                    a.works-desc__link(href="yandex.ru") Посмотреть сайт
+                    a.works-desc__link(href="https://yandex.ru/") Посмотреть сайт
                 li.works-desc__item
                     h2.works-desc__title Сайт 3
                     p.works-desc__text Html, Css, Javascipt
-                    a.works-desc__link(href="vk.com") Посмотреть сайт
+                    a.works-desc__link(href="https://vk.com/") Посмотреть сайт
                 li.works-desc__item
                     h2.works-desc__title Сайт 4
                     p.works-desc__text Html, Css, Javascipt
-                    a.works-desc__link(href="mail.ru") Посмотреть сайт
+                    a.works-desc__link(href="https://mail.ru/") Посмотреть сайт
         .works-container-right      
-            include ../common/slider.pug
+            ul.slider#slides
+                li.slider__item.slider__item-active
+                    img.slider__img(src="./assets/images/work-1.png", alt="")
+                li.slider__item
+                    img.slider__img(src="./assets/images/work-2.png", alt="")
+                li.slider__item
+                    img.slider__img(src="./assets/images/work-3.png", alt="")
+                li.slider__item
+                    img.slider__img(src="./assets/images/work-4.png", alt="")
+            .buttons
+                button.controls#previous &lt;
+                button.controls#next &gt;g
 
     .comments
         h2.comments__title Что обо мне говорят
         ul.comments__list
             li.comments__item
-                img.comments__photo(src="", alt="")
+                img.comments__photo(src="../images/dima.jpg", alt="dima")
                 p.comments__item-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
                 p.comments__item-author Ковальчук Дмитрий — основатель Loftschool
             li.comments__item
-                img.comments__photo(src="", alt="")
+                img.comments__photo(src="../images/vova.jpg", alt="vova")
                 p.comments__item-text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
                 p.comments__item-author Сабанцев Владимир — преподаватель
         form.comments-form(action="")
@@ -48,4 +77,37 @@ block content
                     input.comments-form__btn(type="button", value="Отправить") 
                 li.comments-form__item
                     input.comments-form__btn(type="button", value="Очистить") 
-    
+    footer.footer
+        .footer__container
+                .footer__description 
+                        p.footer__description-text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+                .footer__block-center
+                        ul.menu
+                            li.menu__item
+                                a.menu__link(href="my-works.html") Мои работы
+                            li.menu__item
+                                a.menu__link(href="about.html") Обо мне
+                            li.menu__item
+                                a.menu__link(href="blog.html") Блог
+                            li.menu__item
+                                a.menu__link(href="index.html") Авторизация 
+                        ul.social
+                            li.social__item
+                                a.social__link.social__link-in(href="https://github.com/andrey-goryachev")
+                                    svg.social__pic(width="50" height="50")
+                                        use(xlink:href="./assets/sprites/sprite.svg#vk") 
+                            li.social__item
+                                a.social__link.social__link-vk(href="https://vk.com/ag_888")
+                                    svg.social__pic(width="50" height="50")
+                                        use(xlink:href="./assets/sprites/sprite.svg#github") 
+                            li.social__item
+                                a.social__link.social__link-git(href="https://github.com/andrey-goryachev")
+                                    svg.social__pic(width="50" height="50")
+                                        use(xlink:href="./assets/sprites/sprite.svg#in") 
+
+                ul.contacts__list_footer
+                        li.contacts__item_footer 79852882808@yandex.ru
+                        li.contacts__item_footer 79852882808@yandex.ru
+                        li.contacts__item_footer +7 985 288 28 08
+                        li.contacts__item_footer г. Чехов ул. Земская д. 6
+        .footer__text_main © #{name}  | создано с любовью в LoftSchool | 2018

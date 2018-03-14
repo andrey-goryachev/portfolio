@@ -1,6 +1,6 @@
 .social {
     list-style: none;
-    width: 180px;
+    width: 140px;
     padding: 0;
     margin: 0;
     display: flex;
@@ -8,18 +8,28 @@
     align-items: center;
 }
 
-.social__item {
-
-}
-
 .social__link {
     display: block;
-}
-.social__pic {
-    fill: $blueLight;
+    flex: 1;
     width: 30px;
     height: 30px;
+}
+
+.social__link-vk {
+    background: url(../sprites/vk.svg) bottom center no-repeat;
     &:hover {
-        fill: $blue;
+        background: url(../sprites/vk-blue.svg) bottom center no-repeat;
     }
+}
+.social__link-git {
+    background: url(../sprites/github.svg) bottom center no-repeat;
+        &:hover {
+            background: url(../sprites/github-blue.svg) bottom center no-repeat;
+        }
+}
+.social__link-in {
+    background: url(../sprites/in.svg) bottom center no-repeat;
+        &:hover {
+            background: url(../sprites/in-blue.svg) bottom center no-repeat;
+        }
 }

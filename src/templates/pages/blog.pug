@@ -4,10 +4,27 @@ block variables
     - var title = 'Блог'
     - var name = 'Блог'
     - var downNameText = 'Статьи которые я написал'
-
-    include ../common/header.pug
-
+    
 block content
+    header.header
+        .header__socials
+            ul.social
+                li.social__item
+                    a.social__link.social__link-vk(href="https://vk.com/ag_888")
+                li.social__item
+                    a.social__link.social__link-git(href="https://github.com/andrey-goryachev")
+                li.social__item
+                    a.social__link.social__link-in(href="https://github.com/andrey-goryachev")
+        .header__title
+            .header__user.user
+                .user__pic
+                    img(src="./assets/images/ava.jpg", alt="My photo").user__pic-img
+                .user__description
+                    .user__name #{name}
+                    .user__info #{downNameText}
+        .header__menu.hamburger
+        .header__figure.stars_1
+        .header__scroll-btn.arrow-down
     .blog
         ul.nav
             li.nav__item
@@ -38,4 +55,37 @@ block content
                 p.blog__item-text
         .blog__clear
 
-    include ../common/footer.pug
+    footer.footer
+        .footer__container
+                .footer__description 
+                        p.footer__description-text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+                .footer__block-center
+                        ul.menu
+                            li.menu__item
+                                a.menu__link(href="my-works.html") Мои работы
+                            li.menu__item
+                                a.menu__link(href="about.html") Обо мне
+                            li.menu__item
+                                a.menu__link(href="blog.html") Блог
+                            li.menu__item
+                                a.menu__link(href="index.html") Авторизация 
+                        ul.social
+                            li.social__item
+                                a.social__link.social__link-in(href="https://github.com/andrey-goryachev")
+                                    svg.social__pic(width="50" height="50")
+                                        use(xlink:href="./assets/sprites/sprite.svg#vk") 
+                            li.social__item
+                                a.social__link.social__link-vk(href="https://vk.com/ag_888")
+                                    svg.social__pic(width="50" height="50")
+                                        use(xlink:href="./assets/sprites/sprite.svg#github") 
+                            li.social__item
+                                a.social__link.social__link-git(href="https://github.com/andrey-goryachev")
+                                    svg.social__pic(width="50" height="50")
+                                        use(xlink:href="./assets/sprites/sprite.svg#in") 
+
+                ul.contacts__list_footer
+                        li.contacts__item_footer 79852882808@yandex.ru
+                        li.contacts__item_footer 79852882808@yandex.ru
+                        li.contacts__item_footer +7 985 288 28 08
+                        li.contacts__item_footer г. Чехов ул. Земская д. 6
+        .footer__text_main © #{name}  | создано с любовью в LoftSchool | 2018

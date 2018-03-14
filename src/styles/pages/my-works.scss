@@ -1,0 +1,78 @@
+.works {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.works-container-left {
+    flex: 1;
+}
+.works-desc__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.works-desc__item {
+    display: none;
+}
+.works-desc__item-active {
+    display: block;
+    text-align: center;
+}
+.works-desc__title {
+    display: inline-block;
+    font: 35px SansusWebissimo;
+    color: $gray;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid $gray;
+    width: 320px;
+    padding: 30px;
+    margin: 0 0 25px 0;
+}
+.works-desc__text {
+    color: $blue;
+    font: 1rem Roboto-Medium;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0 0 60px;
+}
+.works-desc__link {
+    display: inline-block;
+    text-decoration: none;
+    font: 1rem Roboto-Medium;
+    color: #fff;
+    background-color: $blueLight;
+    padding: 15px 20px 15px 50px;
+}
+.works-container-right {
+    flex: 1;
+}
+
+.comments {
+    background: url(../images/what-about-bg.jpg) no-repeat center center / cover;
+    color: #fff;
+    padding: 70px;
+}
+.comments__title {
+    font: 63px SansusWebissimo;
+    text-align: center;
+    margin: 0;
+}
+.comments__list {
+    list-style: none;
+    text-align: center;
+}
+.comments__item {
+    display: inline-block;
+    width: 49%; // удалить потом
+}
+.comments__photo {
+    width: 77px;
+    height: 77px;
+    border-radius: 50%;
+}

@@ -1,36 +1,80 @@
 .header {
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
+    flex-flow: row nowrap;
+    justify-content: center;
     align-items: center;
-    padding: 30px 30px 0 30px;
-    background: url(../images/welcome-bg.jpg) center center no-repeat;
-
+    position: relative;
+    background: url(../images/welcome-bg.jpg) center center no-repeat / cover;
 }
-.header__up-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 90px;
-}
-.hamburger {
-    fill: #fff;
-}
-.photo.photo_header {
-    margin-bottom: 30px;
+.header__socials {
+    position: absolute;
+    top: 30px;
+    left: 30px;
 }
 .header__title {
+    padding-top: 150px;
+    z-index: 1;
+}
+.user {
+    
+}
+.user__pic {;
+    text-align: center;
+}
+.user__pic-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+.user__description {
+    padding-top: 20px;
+    margin-bottom: 225px;
+}
+.user__name {
     color: #fff;
     font: 35px Roboto-Medium;
-    margin-bottom: 7px;
+    margin-bottom: 5px;
+    text-align: center;
 }
-.header__text {
+.user__info {
     color: #fff;
     font: 16px Roboto-Regular;
+    text-align: center;
 }
-.header__bg {
-    fill: #f2f0e8;
-    height: 175px;
-    width: 1300px;
+.header__menu {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.hamburger {
+    width: 40px;
+    height: 40px;
+    background: url(../sprites/hamburger.svg) center center no-repeat;
+}
+.arrow-down {
+    width: 30px;
+    height: 20px;
+    background: url(../sprites/arrow_down.svg) center center no-repeat;
+}
+.header__scroll-btn {
+    position: absolute;
+    top: 500px;
+    z-index: 1;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.stars_1 {
+    width: 490px;
+    height: 290px;
+    background: url(../sprites/stars1.svg) center center no-repeat / cover;
+    opacity: .1;    
+}
+.header__figure {
+    position: absolute;
+    left: center;
+    top: 120px;
 }
