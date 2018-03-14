@@ -1,0 +1,49 @@
+.blog {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #455a64;
+    background-color: #faf8f0;
+}
+.nav {
+    flex: 1;
+    list-style: none;
+    margin-top: 70px;
+}
+.nav__link {
+    display: block;
+    text-decoration: none;
+    color: #455a64;
+    font: 16px Roboto-Regular;
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 17px;
+}
+.nav__link-active {
+    color: $blue;
+    font-family: Roboto-Bold;
+    border-right: 3px solid $blue;
+}
+.blog__list {
+    flex: 3;
+    list-style: none;
+    margin: 0;
+}
+.blog__item-title {
+    font: 35px SansusWebissimo;
+    color: $gray;
+    margin: 70px 0 70px 0;
+}
+.blog__item-date {
+    font: 16px Roboto-Regular;
+    color: $blue;
+}
+.blog__item-text {
+    font: 16px Roboto-Regular;
+    line-height: 1.7;
+    margin-bottom: 70px;
+}
+.blog__clear {
+    flex: 1;
+}
