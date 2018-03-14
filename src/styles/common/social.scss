@@ -33,3 +33,23 @@
             background: url(../sprites/in-blue.svg) bottom center no-repeat;
         }
 }
+
+.social__link-vk-blue {
+    background: url(../sprites/vk-dark-blue.svg) bottom center no-repeat;
+    &:hover {
+        background: url(../sprites/vk-blue.svg) bottom center no-repeat;
+    }
+}
+.social__link-git-blue {
+    background: url(../sprites/github-dark-blue.svg) bottom center no-repeat;
+        &:hover {
+            background: url(../sprites/github-blue.svg) bottom center no-repeat;
+        }
+}
+.social__link-in-blue {
+    background: url(../sprites/in-dark-blue.svg) bottom center no-repeat;
+        &:hover {
+            background: url(../sprites/in-blue.svg) bottom center no-repeat;
+        }
+}
+
