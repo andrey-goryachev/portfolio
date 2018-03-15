@@ -25,45 +25,85 @@ block content
         .header__menu.hamburger
         .header__figure.stars_1
         .header__scroll-btn.arrow-down
+        .header__rectangle
+            .header__rectangle-left.rectangle
+                svg(width="901px" height="1013px")
+                    g
+                        path(fill-rule="evenodd" clip-rule="evenodd" fill="#black" d="M0.01,0l899.997,159.008v854.979H0L0.01,0z")
+            .header__rectangle-right.rectangle
+                svg(width="901px" height="1009px")
+                    g
+                        path(fill-rule="evenodd" clip-rule="evenodd" fill="#black" d="M0,155.008L900.331,0l-0.005,1009.986H0V155.008z")
     section.about
         .about__left
-            .about__left-title.big-title Обо мне
-        .about__center
-            .about__center-wrap
+            .about__left-left
+                .about__left-title.big-title Обо мне
+            .about__left-right
                 .about__photo 
                     img(src="./assets/images/ava.jpg", alt="My photo").user__pic-img_big
-                .about__center-title.subtitle Кто я
-                .about__center-text.about-text
-                    p Я веб разработчик из Чехова. Мне 30 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+                .about__left-right-title.subtitle Кто я
+                .about__left-right-text.about-text
+                    p Я веб разработчик из Чехова. Мне 30 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                     p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!    
         .about__right
-            .about__right-wrap
-                .about__right-title.subtitle Чем я могу быть вам полезен
-                .about__right-text.about-text
-                    p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
-                .about__right-content
-                    ul.diagram-list
-                        li.diagram__item
-                            h3.diagram__item-title Frontend
-                            ul.diagram__pic-list
-                                li.pic-item
-                                li.pic-item
-                                li.pic-item
-                                li.pic-item
-                        li.diagram__item
-                            h3.diagram__item-title Backend
-                            ul.diagram__pic-list
-                                li.pic-item
-                                li.pic-item
-                                li.pic-item
-                                li.pic-item
-                        li.diagram__item
-                            h3.diagram__item-title WorkFlow
-                            ul.diagram__pic-list
-                                li.pic-item
-                                li.pic-item
-                                li.pic-item
-                                li.pic-item
+            
+            .about__right-title.subtitle Чем я могу быть вам полезен
+            .about__right-text.about-text
+                p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
+            .about__right-content
+                ul.skills-list
+                    li.skills-list__item
+                        .skills-row
+                            .skills-row__title Frontend
+                            ul.skills-row__list
+                                li.skills-row__item
+                                    .skill
+                                        svg.skill__circle
+                                        .skill__title Html5
+                                li.skills-row__item
+                                    .skill
+                                        svg.skill__circle
+                                        .skill__title css3
+                                li.skills-row__item
+                                    .skill
+                                        svg.skill__circle
+                                        .skill__title JavaScript
+                    li.skills-list__item
+                        .skills-row
+                            .skills-row__title Backend
+                            ul.skills-row__list
+                                li.skills-row__item
+                                    .skill
+                                        svg.skill__circle
+                                        .skill__title PHP
+                                li.skills-row__item
+                                    .skill
+                                        svg.skill__circle
+                                        .skill__title mySQL
+                                li.skills-row__item
+                                    .skill
+                                        svg.skill__circle
+                                        .skill__title Node.js & npm
+                                li.skills-row__item
+                                    .skill
+                                        svg.skill__circle
+                                        .skill__title Mongo.db
+                    li.skills-list__item
+                    .skills-row
+                        .skills-row__title Workflow
+                        ul.skills-row__list
+                            li.skills-row__item
+                            .skill
+                                svg.skill__circle
+                                .skill__title Git
+                            li.skills-row__item
+                            .skill
+                                svg.skill__circle
+                                .skill__title Gulp
+                            li.skills-row__item
+                            .skill
+                                svg.skill__circle
+                                .skill__title Bower
     section.map
         .contacts
             h2.about__h2 Контакты

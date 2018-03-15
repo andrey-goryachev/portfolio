@@ -1,37 +1,106 @@
 .about {
     color: $gray;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
+}
+.about__left {
+    flex: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-right: 25px;
+    background-color: #f2f0e8;
+}
+.about__left-left {
+    flex: 1;
 }
 .big-title {
     font: 63px SansusWebissimo;
 }
-.about__photo {
+.about__left-title {
     text-align: center;
 }
-.user__pic-img_big {
-    width: 330px;
-    height: 330px;
+.about__left-right {
+    flex: 1;
 }
-
+.about__photo {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.user__pic-img_big {
+    width: 100%;
+    height: 100%;
+}
+.about__left-right-title {
+    text-align: center;
+}
 .subtitle {
     font: 35px SansusWebissimo;
     text-transform: uppercase;
-    
+    &:after {
+        content: " ";
+        display: block;
+        margin: 20px auto 0;
+        width: 90px;
+        border-bottom: 3px solid $gray;
+    }
+}
+.about__left-right-text {
+    padding-top: 12px;
 }
 .about-text {
     font: 16px Roboto-Regular;
     text-align: left;
+    line-height: 1.5;
+}
+.about__right {
+    flex: 1;
+    padding-left: 25px;
+    background-color: #eae8e2;
+}
+.about__right-title {
+    text-align: center;
+    width: 280px;
+    margin: 0 auto;
+}
+.about__right-text{
+    padding-top: 12px;
 }
 
-.diagram__item {
+.skills-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
-.diagram__item-title {
+.skills-row__title {
     font: 28px Roboto-Medium;
     text-align: left;
 }
-.diagram__pic-list {
+.skills-row__list {
     list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
 }
+.skills-row__item {
+    flex: 1;
+}
+.skill {
+    width: 120px;
+    height: 120px;
+}
+.skill__title {
+    color: #243994;
+    font: 14px Roboto-Medium;
+}
+
+
 .map {
     height: 800px; //потом удалить
     display: flex;
