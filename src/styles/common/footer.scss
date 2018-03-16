@@ -5,6 +5,10 @@
     position: relative;
 }
 
+.footer_no-negative-margin {
+    margin-top: 0;
+}
+
 .footer__row-first {
     font: 16px Roboto-Light;
     display: flex;
@@ -16,6 +20,9 @@
     padding-top: 30px;
     box-sizing: border-box;
     height: 150px;
+}
+.footer__row-first_no-opacity {
+    background-color: #3d3f47;
 }
 .footer__row-first__left {
     flex: 1;
@@ -80,6 +87,9 @@
     justify-content: center;
     align-items: center;
 
+}
+.footer__row-second_no-opacity {
+    background-color: #2b58a4;
 }
 .footer__row-second__text {
     color: #fff;

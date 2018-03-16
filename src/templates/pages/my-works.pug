@@ -8,11 +8,11 @@ block content
         .header__socials
             ul.social
                 li.social__item
-                    a.social__link.social__link-vk(href="https://vk.com/ag_888")
+                    a.social__link.social__link-vk(href="https://vk.com/ag_888" target="_blank")
                 li.social__item
-                    a.social__link.social__link-git(href="https://github.com/andrey-goryachev")
+                    a.social__link.social__link-git(href="https://github.com/andrey-goryachev" target="_blank")
                 li.social__item
-                    a.social__link.social__link-in(href="https://github.com/andrey-goryachev")
+                    a.social__link.social__link-in(href="https://github.com/andrey-goryachev" target="_blank")
         .header__title
             .header__user.user
                 .user__pic
@@ -23,33 +23,27 @@ block content
         .header__menu.hamburger
         .header__figure.stars_1
         .header__scroll-btn.arrow-down
-        .header__rectangle
-            .header__rectangle-left.rectangle
-                svg(width="901px" height="1013px")
-                    g
-                        path(fill-rule="evenodd" clip-rule="evenodd" fill="#black" d="M0.01,0l899.997,159.008v854.979H0L0.01,0z")
-            .header__rectangle-right.rectangle
-                svg(width="901px" height="1009px")
-                    g
-                        path(fill-rule="evenodd" clip-rule="evenodd" fill="#black" d="M0,155.008L900.331,0l-0.005,1009.986H0V155.008z")
-    .works
+        .header__rectangle.header__rectangle-dark
+            .header__rectangle-title.big-title Мои работы
+            .header__rectangle-figure.stars2
+    section.works
         .works-container-left
             ul.works-desc__list
                 li.works-desc__item.works-desc__item-active
-                    h2.works-desc__title Сайт школы онлайн образования
-                    p.works-desc__text Html, Css, Javascipt
+                    .works-desc__title.subtitle Сайт школы онлайн образования
+                    .works-desc__text Html, Css, Javascipt
                     a.works-desc__link(href="https://loftschool.com/") Посмотреть сайт
                 li.works-desc__item
                     h2.works-desc__title Сайт 2
-                    p.works-desc__text Html, Css, Javascipt
+                    .works-desc__text Html, Css, Javascipt
                     a.works-desc__link(href="https://yandex.ru/") Посмотреть сайт
                 li.works-desc__item
                     h2.works-desc__title Сайт 3
-                    p.works-desc__text Html, Css, Javascipt
+                    .works-desc__text Html, Css, Javascipt
                     a.works-desc__link(href="https://vk.com/") Посмотреть сайт
                 li.works-desc__item
                     h2.works-desc__title Сайт 4
-                    p.works-desc__text Html, Css, Javascipt
+                    .works-desc__text Html, Css, Javascipt
                     a.works-desc__link(href="https://mail.ru/") Посмотреть сайт
         .works-container-right      
             ul.slider#slides
@@ -64,59 +58,56 @@ block content
             .buttons
                 button.controls#previous &lt;
                 button.controls#next &gt;g
-
-    .comments
-        h2.comments__title Что обо мне говорят
+    section.comments
+        .comments__title.big-title Что обо мне говорят
         ul.comments__list
             li.comments__item
-                img.comments__photo(src="../images/dima.jpg", alt="dima")
-                p.comments__item-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                p.comments__item-author Ковальчук Дмитрий — основатель Loftschool
+                img.comments__photo(src="../assets/images/dima.jpg", alt="dima")
+                .comments__item-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                .comments__item-author Ковальчук Дмитрий
+                .comments__item-position  — основатель Loftschool
             li.comments__item
-                img.comments__photo(src="../images/vova.jpg", alt="vova")
-                p.comments__item-text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-                p.comments__item-author Сабанцев Владимир — преподаватель
-        form.comments-form(action="")
-            h2.comments-form__title Связаться со мной
+                img.comments__photo(src="../assets/images/vova.jpg", alt="vova")
+                .comments__item-text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                .comments__item-author Сабанцев Владимир
+                .comments__item-position — преподаватель
+        form.comments-form.feedback(action="")
+            .comments-form__title.subtitle Связаться со мной
             input.comments-form__text(type="text", name="")
             input.comments-form__email(type="email", name="")
             textarea.comments-form__message(name="", cols="30", rows="10")
-            ul.comments-form__list
-                li.comments-form__item
-                    input.comments-form__btn(type="button", value="Отправить") 
-                li.comments-form__item
-                    input.comments-form__btn(type="button", value="Очистить") 
+        ul.comments-form__list
+            li.comments-form__item
+                input.comments-form__btn(type="button", value="Отправить") 
+            li.comments-form__item
+                input.comments-form__btn(type="button", value="Очистить") 
     footer.footer
-        .footer__container
-                .footer__description 
-                        p.footer__description-text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
-                .footer__block-center
-                        ul.menu
-                            li.menu__item
-                                a.menu__link(href="my-works.html") Мои работы
-                            li.menu__item
-                                a.menu__link(href="about.html") Обо мне
-                            li.menu__item
-                                a.menu__link(href="blog.html") Блог
-                            li.menu__item
-                                a.menu__link(href="index.html") Авторизация 
-                        ul.social
-                            li.social__item
-                                a.social__link.social__link-in(href="https://github.com/andrey-goryachev")
-                                    svg.social__pic(width="50" height="50")
-                                        use(xlink:href="./assets/sprites/sprite.svg#vk") 
-                            li.social__item
-                                a.social__link.social__link-vk(href="https://vk.com/ag_888")
-                                    svg.social__pic(width="50" height="50")
-                                        use(xlink:href="./assets/sprites/sprite.svg#github") 
-                            li.social__item
-                                a.social__link.social__link-git(href="https://github.com/andrey-goryachev")
-                                    svg.social__pic(width="50" height="50")
-                                        use(xlink:href="./assets/sprites/sprite.svg#in") 
-
+        .footer__row-first
+            .footer__row-first__left 
+                .footer__description-text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+            .footer__row-first-center
+                    ul.footer__menu.menu
+                        li.footer__menu-item.menu__item
+                            a.menu__link(href="my-works.html") Мои работы
+                        li.footer__menu-item.menu__item
+                            a.menu__link(href="about.html") Обо мне
+                        li.footer__menu-item.menu__item
+                            a.menu__link(href="blog.html") Блог
+                        li.footer__menu-item.menu__item
+                            a.menu__link(href="index.html") Авторизация 
+                    ul.footer__social.social
+                        li.social__item
+                            a.social__link.social__link-vk(href="https://vk.com/ag_888" target="_blank")
+                        li.social__item
+                            a.social__link.social__link-git(href="https://github.com/andrey-goryachev" target="_blank")
+                        li.social__item
+                            a.social__link.social__link-in(href="https://github.com/andrey-goryachev" target="_blank")
+            .footer__row-first__right
                 ul.contacts__list_footer
-                        li.contacts__item_footer 79852882808@yandex.ru
+                        li.contacts__item_footer skype_kdn
                         li.contacts__item_footer 79852882808@yandex.ru
                         li.contacts__item_footer +7 985 288 28 08
                         li.contacts__item_footer г. Чехов ул. Земская д. 6
-        .footer__text_main © #{name}  | создано с любовью в LoftSchool | 2018
+            
+        .footer__row-second
+            .footer__row-second__text © Андрей Горячев | создано с любовью в LoftSchool | 2018

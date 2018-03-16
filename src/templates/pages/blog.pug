@@ -20,12 +20,12 @@ block content
                 .user__pic
                     img(src="./assets/images/ava.jpg", alt="My photo").user__pic-img
                 .user__description
-                    .user__name #{name}
+                    .user__name.big-title #{name}
                     .user__info #{downNameText}
         .header__menu.hamburger
         .header__figure.stars_1
         .header__scroll-btn.arrow-down
-        .header__rectangle
+        .header__rectangle.header__rectangle-light
     section.blog
         ul.blog_nav.nav
             li.nav__item
@@ -64,8 +64,8 @@ block content
                     p
         .blog__clear
 
-    footer.footer
-        .footer__row-first
+    footer.footer.footer_no-negative-margin
+        .footer__row-first.footer__row-first_no-opacity
             .footer__row-first__left 
                 .footer__description-text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
             .footer__row-first-center
@@ -92,5 +92,5 @@ block content
                         li.contacts__item_footer +7 985 288 28 08
                         li.contacts__item_footer г. Чехов ул. Земская д. 6
             
-        .footer__row-second 
-            .footer__row-second__text © #{name} | создано с любовью в LoftSchool | 2018
+        .footer__row-second.footer__row-second_no-opacity 
+            .footer__row-second__text © Андрей Горячев | создано с любовью в LoftSchool | 2018

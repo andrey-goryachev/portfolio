@@ -24,13 +24,10 @@
 }
 .works-desc__title {
     display: inline-block;
-    font: 35px SansusWebissimo;
     color: $gray;
     text-align: center;
     text-transform: uppercase;
-    border-bottom: 2px solid $gray;
     width: 320px;
-    padding: 30px;
     margin: 0 0 25px 0;
 }
 .works-desc__text {
@@ -46,6 +43,7 @@
     text-decoration: none;
     font: 1rem Roboto-Medium;
     color: #fff;
+    background: url(../sprites/link.svg) no-repeat 16px center / 20px 20px ;
     background-color: $blueLight;
     padding: 15px 20px 15px 50px;
 }
@@ -56,23 +54,50 @@
 .comments {
     background: url(../images/what-about-bg.jpg) no-repeat center center / cover;
     color: #fff;
-    padding: 70px;
+    padding: 70px 0 180px 0;
 }
 .comments__title {
-    font: 63px SansusWebissimo;
     text-align: center;
-    margin: 0;
+    width: 370px;
+    margin: 0 auto;
 }
 .comments__list {
     list-style: none;
     text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 0 70px 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 .comments__item {
-    display: inline-block;
-    width: 49%; // удалить потом
+    width: 380px;
+    font: 1rem Roboto-Italic;
+    line-height: 26px;
 }
+
 .comments__photo {
     width: 77px;
     height: 77px;
     border-radius: 50%;
+    margin-bottom: 20px;
+}
+.comments__item-text {
+    margin-bottom: 30px;
+}
+.comments__item-author {
+    font: 1rem Roboto-BoldItalic;
+}
+
+.comments-form {
+    margin: 0 auto;
+}
+.feedback {
+    width: 380px;
+}
+.comments-form__title {
+    text-align: center;
+    margin-bottom: 30px;
 }

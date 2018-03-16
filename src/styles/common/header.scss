@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    background: url(../images/welcome-bg.jpg) center center no-repeat;
+    background: url(../images/welcome-bg.jpg) bottom center no-repeat;
     background-size: cover;
 }
 .header__socials {
@@ -76,34 +76,37 @@
 }
 .header__figure {
     position: absolute;
-    left: center;
     top: 120px;
 }
 .header__rectangle {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 0;
-    padding: 0;
     height: 180px;
+    width: 100%;
 }
-// .rectangle {
-//     flex: 1;
-//     margin: 0;
-//     padding: 0;
-//     border: none;
-//     width: 50%;
-// }
-// .rectangle__svg {
-//     width: 100%;
-// }
-// .header__rectangle-right {
-//     padding-top: 4px;
-//     fill: #eae8e2;
-//     margin-left: -1px;
-// }
-// .header__rectangle-left {
-//     fill: #f2f0e8;
-//     margin-right: -1px;
-// }
+.header__rectangle-light {
+    background: url(../sprites/bg.svg) center top;
+}
+.header__rectangle-dark {
+    background: url(../sprites/bg-dark.svg) center top / cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 340px;
+    position: relative;
+}
+
+.header__rectangle-title {
+    margin-bottom: 56px;
+}
+
+.header__rectangle-figure {
+    position: absolute;
+    bottom: 10px;
+    //left: 40%;
+} 
+.stars2 {
+        width: 270px;
+        height: 175px;
+        background: url(../sprites/stars2-1.svg) center center no-repeat / cover;
+        opacity: .1;
+}
