@@ -4,7 +4,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    background: url(../images/welcome-bg.jpg) center center no-repeat / cover;
+    background: url(../images/welcome-bg.jpg) center center no-repeat;
+    background-size: cover;
 }
 .header__socials {
     position: absolute;
@@ -87,17 +88,22 @@
     padding: 0;
     height: 180px;
 }
-.rectangle {
-    flex: 1;
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-.header__rectangle-right {
-    padding-top: 4px;
-    fill: #eae8e2;
-}
-.header__rectangle-left {
-    fill: #f2f0e8;
-    margin-right: -1px;
-}
+// .rectangle {
+//     flex: 1;
+//     margin: 0;
+//     padding: 0;
+//     border: none;
+//     width: 50%;
+// }
+// .rectangle__svg {
+//     width: 100%;
+// }
+// .header__rectangle-right {
+//     padding-top: 4px;
+//     fill: #eae8e2;
+//     margin-left: -1px;
+// }
+// .header__rectangle-left {
+//     fill: #f2f0e8;
+//     margin-right: -1px;
+// }

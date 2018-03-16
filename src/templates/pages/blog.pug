@@ -10,11 +10,11 @@ block content
         .header__socials
             ul.social
                 li.social__item
-                    a.social__link.social__link-vk(href="https://vk.com/ag_888")
+                    a.social__link.social__link-vk(href="https://vk.com/ag_888" target="_blank")
                 li.social__item
-                    a.social__link.social__link-git(href="https://github.com/andrey-goryachev")
+                    a.social__link.social__link-git(href="https://github.com/andrey-goryachev" target="_blank")
                 li.social__item
-                    a.social__link.social__link-in(href="https://github.com/andrey-goryachev")
+                    a.social__link.social__link-in(href="https://github.com/andrey-goryachev" target="_blank")
         .header__title
             .header__user.user
                 .user__pic
@@ -25,8 +25,9 @@ block content
         .header__menu.hamburger
         .header__figure.stars_1
         .header__scroll-btn.arrow-down
-    .blog
-        ul.nav
+        .header__rectangle
+    section.blog
+        ul.blog_nav.nav
             li.nav__item
                 a.nav__link.nav__link-active(href="") Самое важное в SASS
             li.nav__item
@@ -39,53 +40,57 @@ block content
         ul.blog__list
             li.blog__item
                 h2.blog__item-title Самое важное в SASS
-                p.blog__item-date 22 ноября 2016
-                p.blog__item-text Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+                .blog__item-date
+                    p 22 ноября 2016
+                .blog__item-text
+                    p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
             li.blog__item
                 h2.blog__item-title Приёмы в вёрстке, без которых не обходится ни один сайт
-                p.blog__item-date 13 ноября 2016
-                p.blog__item-text Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+                .blog__item-date
+                    p 13 ноября 2016
+                .blog__item-text
+                    p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
             li.blog__item
                 h2.blog__item-title
-                p.blog__item-date
-                p.blog__item-text
+                .blog__item-date
+                    p
+                .blog__item-text
+                    p
             li.blog__item
                 h2.blog__item-title
-                p.blog__item-date
-                p.blog__item-text
+                .blog__item-date
+                    p
+                .blog__item-text
+                    p
         .blog__clear
 
     footer.footer
-        .footer__container
-                .footer__description 
-                        p.footer__description-text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
-                .footer__block-center
-                        ul.menu
-                            li.menu__item
-                                a.menu__link(href="my-works.html") Мои работы
-                            li.menu__item
-                                a.menu__link(href="about.html") Обо мне
-                            li.menu__item
-                                a.menu__link(href="blog.html") Блог
-                            li.menu__item
-                                a.menu__link(href="index.html") Авторизация 
-                        ul.social
-                            li.social__item
-                                a.social__link.social__link-in(href="https://github.com/andrey-goryachev")
-                                    svg.social__pic(width="50" height="50")
-                                        use(xlink:href="./assets/sprites/sprite.svg#vk") 
-                            li.social__item
-                                a.social__link.social__link-vk(href="https://vk.com/ag_888")
-                                    svg.social__pic(width="50" height="50")
-                                        use(xlink:href="./assets/sprites/sprite.svg#github") 
-                            li.social__item
-                                a.social__link.social__link-git(href="https://github.com/andrey-goryachev")
-                                    svg.social__pic(width="50" height="50")
-                                        use(xlink:href="./assets/sprites/sprite.svg#in") 
-
+        .footer__row-first
+            .footer__row-first__left 
+                .footer__description-text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+            .footer__row-first-center
+                    ul.footer__menu.menu
+                        li.footer__menu-item.menu__item
+                            a.menu__link(href="my-works.html") Мои работы
+                        li.footer__menu-item.menu__item
+                            a.menu__link(href="about.html") Обо мне
+                        li.footer__menu-item.menu__item
+                            a.menu__link(href="blog.html") Блог
+                        li.footer__menu-item.menu__item
+                            a.menu__link(href="index.html") Авторизация 
+                    ul.footer__social.social
+                        li.social__item
+                            a.social__link.social__link-vk(href="https://vk.com/ag_888" target="_blank")
+                        li.social__item
+                            a.social__link.social__link-git(href="https://github.com/andrey-goryachev" target="_blank")
+                        li.social__item
+                            a.social__link.social__link-in(href="https://github.com/andrey-goryachev" target="_blank")
+            .footer__row-first__right
                 ul.contacts__list_footer
-                        li.contacts__item_footer 79852882808@yandex.ru
+                        li.contacts__item_footer skype_kdn
                         li.contacts__item_footer 79852882808@yandex.ru
                         li.contacts__item_footer +7 985 288 28 08
                         li.contacts__item_footer г. Чехов ул. Земская д. 6
-        .footer__text_main © #{name}  | создано с любовью в LoftSchool | 2018
+            
+        .footer__row-second 
+            .footer__row-second__text © #{name} | создано с любовью в LoftSchool | 2018

@@ -1,12 +1,36 @@
+
 .contacts__list {
     list-style: none;
     font: 16px Roboto-Medium;
     padding: 0;
     margin: 0;
+
 }
 .contacts__item {
-    display: inline-block;
-    width: 49%;
-    padding: 15px;
-    box-sizing: border-box;
+    text-align: left;
+}
+
+.contacts__item-skype {
+    line-height: 50px;
+    padding-left: 55px;
+    background: url(../sprites/skype.svg) no-repeat left center;
+    background-size: 45px 45px;
+}
+.contacts__item-mail {
+    line-height: 50px;
+    padding-left: 55px;
+    background: url(../sprites/envelope_n.svg) no-repeat left center;
+    background-size: 45px 45px;
+}
+.contacts__item-phone {
+    line-height: 50px;
+    padding-left: 55px;
+    background: url(../sprites/phone_n.svg) no-repeat left center;
+    background-size: 45px 45px;
+}
+.contacts__item-address {
+    line-height: 50px;
+    padding-left: 55px;
+    background: url(../sprites/map_marker.svg) no-repeat left center;
+    background-size: 45px 45px;
 }
