@@ -1,3 +1,5 @@
+
+
 .wrapper-index {
     width: 100%;
     min-height: 100%;
@@ -9,8 +11,11 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 100px 43px 100px;
+    padding: 25px 100px 43px;
     box-sizing: border-box;
+    @include desktop {
+        padding: 25px 20px 43px;
+    }
 }
 .off {
     display: none

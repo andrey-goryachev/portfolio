@@ -4,13 +4,13 @@
     padding: 0;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     width: 100%;
 }
 
 .menu__item {
-    margin-right: 40px;
+    //margin-right: 40px;
 }
 .menu__link {
     font: 16px Roboto-Bold;
