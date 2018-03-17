@@ -71,16 +71,19 @@ block content
                 .comments__item-text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
                 .comments__item-author Сабанцев Владимир
                 .comments__item-position — преподаватель
-        form.comments-form.feedback(action="")
-            .comments-form__title.subtitle Связаться со мной
-            input.comments-form__text(type="text", name="")
-            input.comments-form__email(type="email", name="")
-            textarea.comments-form__message(name="", cols="30", rows="10")
-        ul.comments-form__list
-            li.comments-form__item
-                input.comments-form__btn(type="button", value="Отправить") 
-            li.comments-form__item
-                input.comments-form__btn(type="button", value="Очистить") 
+        .comments__wrap-form 
+            form.comments-form.feedback(action="")
+                .comments-form__title.subtitle Связаться со мной
+                input.comments-form__txt-style.comments-form__text(type="text", name="", placeholder="Ваше имя")
+                input.comments-form__txt-style.comments-form__email(type="email", name="", placeholder="Ваш e-mail")
+                textarea.comments-form__txt-style.comments-form__message(name="", placeholder="Ваше сообщение")
+            ul.comments-form__btn-list
+                li.comments-form__btn-item
+                    input.comments-form__btn(type="button", value="Отправить") 
+                li.comments-form__btn-item
+                    input.comments-form__btn(type="button", value="Очистить") 
+        .comments-scroll-btn
+            .arrow-up
     footer.footer
         .footer__row-first
             .footer__row-first__left 

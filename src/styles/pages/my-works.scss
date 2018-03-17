@@ -91,13 +91,87 @@
     font: 1rem Roboto-BoldItalic;
 }
 
-.comments-form {
+//form
+
+.comments__wrap-form {
+    width: 380px;
     margin: 0 auto;
 }
-.feedback {
-    width: 380px;
+
+.comments-form {
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba($color: $gray, $alpha: .1);
 }
+
 .comments-form__title {
     text-align: center;
     margin-bottom: 30px;
+}
+
+.comments-form__txt-style {
+    background-color: rgba($color: $gray, $alpha: .2);
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    font: 1rem Roboto-Regular;
+    border: none;
+    color: #fff;
+    outline: none;
+}
+.comments-form__text {
+    
+    height: 45px;
+    margin-bottom: 20px;
+}
+.comments-form__email {
+    margin-bottom: 20px;
+    height: 45px;
+}
+.comments-form__message {
+    height: 130px;
+    resize: none;
+}
+ // buttons
+
+.comments-form__btn-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.comments-form__btn-item {
+    width: 50%;
+}
+.comments-form__btn {
+    background-color: rgba($color: $gray, $alpha: .1);
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    font: 1rem Roboto-Regular;
+    border: none;
+    color: #fff;
+    outline: none;
+    &:hover {
+        background-color: $blueLight;
+        cursor: pointer;
+    }
+}
+
+
+.comments-scroll-btn {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow-up {
+    width: 30px;
+    height: 20px;
+    background: url(../sprites/arrow_up.svg) no-repeat center center / 30px 20px;
+    &:hover {
+        cursor: pointer;
+    }
 }
