@@ -2,10 +2,12 @@ extends ../template
 
 block variables
     - var title = 'Горячев Андрей'
+    - var name = 'Андрей Горячев'
+    - var downNameText = 'Личный сайт веб-разработчика'
 
 
 block content
-    .wrapper
+    .wrapper-index
         button.btn-auth Авторизоваться
         .welcome
             .welcome-wrap
@@ -27,32 +29,35 @@ block content
                     a.menu-welcome__link(href="about.html") Обо мне 
                 li.menu-welcome__btn
                     a.menu-welcome__link(href="blog.html") Блог
-
-        .auth
-            h2.auth__title Авторизуйтесь
-            form.form-auth(action="")
-                .form-auth__wrap-pic
-                    svg.form-auth__pic(width="45" height="45")
-                        use(xlink:href="./assets/sprites/sprite.svg#login") 
-                    input.form-auth__txt(type="text", name="", placeholder="Логин")
-                .form-auth__wrap-pic
-                    svg.form-auth__pic(width="45" height="45")
-                        use(xlink:href="./assets/sprites/sprite.svg#password") 
-                    input.form-auth__txt(type="password", name="" placeholder="Пароль")
-                .form-auth__wrap-check
-                    input.form-auth__check#form-auth__check(type="checkbox", name="") 
-                    label.form-auth__check-txt(for="form-auth__check") Я человек
-                .form-auth__question А вы точно не робот?
-                .form-auth__wrap-radio
-                    input.form-auth__radio#form-auth__radio-yes(type="radio", name="youRobot")
-                    label.form-auth__radio-txt(for="form-auth__radio-yes") Да
-                    input.form-auth__radio#form-auth__radio-no(type="radio", name="youRobot")
-                    label.form-auth__radio-txt(for="form-auth__radio-no") Не уверен
-                ul.form-auth__btn-list
-                    li.form-auth__btn-item
-                        a.form-auth__btn-link(href="") На главную 
-                    li.form-auth__btn-item
-                        a.form-auth__btn-link(href="") Войти 
-        footer.footer    
+        .auth-wrap
+            .auth 
+                .auth__title Авторизуйтесь
+                form.form-auth(action="")
+                    .form-auth__wrap-input
+                        .form-auth__pic.form-auth__pic_login
+                        input.form-auth__txt(type="text", name="", placeholder="Логин")
+                    .form-auth__wrap-input    
+                        .form-auth__pic.form-auth__pic_password
+                        input.form-auth__txt(type="password", name="" placeholder="Пароль")
+                    label.form-auth__wrap-check
+                            input.form-auth__check(type="checkbox", name="", checked) 
+                            .form-auth__check-custom
+                            span.form-auth__check-txt(for="form-auth__check") Я человек
+                    .form-auth__question Вы точно не робот?
+                    .form-auth__wrap-radio
+                        label
+                            input.form-auth__radio(type="radio", name="youRobot")
+                            .form-auth__radio-custom
+                            span.form-auth__radio-txt Да
+                        label
+                            input.form-auth__radio(type="radio", name="youRobot", checked)
+                            .form-auth__radio-custom
+                            span.form-auth__radio-txt Не уверен
+            ul.form-auth__btn-list
+                li.form-auth__btn-item
+                    a.form-auth__btn-link(href="") На главную 
+                li.form-auth__btn-item
+                    a.form-auth__btn-link(href="") Войти 
+        footer.footer-index    
             .footer__text_index © #{name}  | создано с любовью в LoftSchool | 2018  
             

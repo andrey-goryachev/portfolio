@@ -55,9 +55,11 @@ block content
                     img.slider__img(src="./assets/images/work-3.png", alt="")
                 li.slider__item
                     img.slider__img(src="./assets/images/work-4.png", alt="")
-            .buttons
-                button.controls#previous &lt;
-                button.controls#next &gt;g
+        .works-buttons
+            .works-buttons__left.controls#previous
+                .btn-arrow-down
+            .works-buttons__right.controls#next
+                .btn-arrow-up
     section.comments
         .comments__title.big-title Что обо мне говорят
         ul.comments__list

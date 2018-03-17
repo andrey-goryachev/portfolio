@@ -1,3 +1,8 @@
+.slider {
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+}
 .slider__item {
     display: none;
 }
