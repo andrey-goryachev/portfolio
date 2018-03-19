@@ -5,9 +5,9 @@
     justify-content: space-between;
     align-items: stretch;
     position: relative;
-    margin-top: -180px;
-    
+    margin-top: -180px;  
 }
+
 .about__left {
     flex: 1;
     display: flex;
@@ -22,34 +22,40 @@
     background-size: cover;
     padding-top: 180px;
 }
+
 .about__left-left {
     flex: 1;
     position: relative;
 }
+
 .big-title {
     font: 63px SansusWebissimo;
     text-transform: uppercase;
 }
+
 .about__left-title {
     text-align: center;
 }
 
-
 .about__left-right {
     flex: 1;
+
 }
 .about__photo {
     text-align: center;
     width: 100%;
     margin-bottom: 30px;
 }
+
 .user__pic-img_big {
     width: 100%;
     height: 100%;
 }
+
 .about__left-right-title {
     text-align: center;
 }
+
 .subtitle {
     font: 35px SansusWebissimo;
     text-transform: uppercase;
@@ -61,14 +67,17 @@
         border-bottom: 3px solid $gray;
     }
 }
+
 .about__left-right-text {
     padding-top: 12px;
 }
+
 .about-text {
     font: 16px Roboto-Regular;
     text-align: left;
     line-height: 1.5;
 }
+
 .about__right {
     flex: 1;
     padding-left: 25px;
@@ -78,11 +87,13 @@
     background-size: cover;
     padding-top: 180px;
 }
+
 .about__right-title {
     text-align: center;
     width: 280px;
     margin: 0 auto;
 }
+
 .about__right-text{
     padding-top: 12px;
 }
@@ -92,14 +103,17 @@
     margin: 0;
     padding: 0;
 }
+
 .skills-list__item {
     margin-bottom: 40px;
 }
+
 .skills-row__title {
     font: 28px Roboto-Medium;
     text-align: left;
     margin-bottom: 20px;
 }
+
 .skills-row__list {
     list-style: none;
     display: flex;
@@ -108,9 +122,11 @@
     align-items: center;
     padding: 0;
 }
+
 .skills-row__item {
     margin-right: 40px;
 }
+
 .skill {
     width: 120px;
     height: 120px;
@@ -160,7 +176,6 @@
     stroke-dashoffset: 0;
 }
 
-
 .skill__title {
     color: #243994;
     font: 14px Roboto-Medium;
@@ -180,13 +195,16 @@
     align-items: center;
     color: $gray;
 }
+
 .contacts {
     width: 580px;
     height: 285px;
 }
+
 .map {
     position: relative;
 }
+
 .map__center {
     position: absolute;
     z-index: 1;
@@ -195,12 +213,15 @@
     box-sizing: border-box;
     background-color: rgba($color: #fff, $alpha: .5)
 }
+
 .map__google {
     width: 100%;
 }
+
 .map__title {
     margin-bottom: 30px;
 }
+
 .map__list {
     display: flex;
     flex-flow: row wrap;
@@ -209,6 +230,7 @@
     align-content: space-between;
     height: 130px;
 }
+
 .map__item {
     width: 260px;
     height: 50px;
