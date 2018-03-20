@@ -15,6 +15,7 @@ block content
                     a.social__link.social__link-git(href="https://github.com/andrey-goryachev" target="_blank")
                 li.social__item
                     a.social__link.social__link-in(href="https://github.com/andrey-goryachev" target="_blank")
+        .header__menu.hamburger
         .header__title
             .header__user.user
                 .user__pic
@@ -22,10 +23,12 @@ block content
                 .user__description
                     .user__name.big-title #{name}
                     .user__info #{downNameText}
-        .header__menu.hamburger
-        .header__figure.stars_1
+            .header__figure.stars_1
         .header__scroll-btn.arrow-down
-        .header__rectangle.header__rectangle-light
+        .header__rectangle
+            svg.header__polygon(viewbox="0 0 1000 85" preserveaspectratio="none")
+                polygon.header__polygon-left_blog(points="0,0   0,86   500.8,86   500.8,75.5")
+                polygon.header__polygon-right_blog(points="1000,0   1000,86   500,86   500,75.5")
     section.blog
         ul.blog_nav.nav
             li.nav__item

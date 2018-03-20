@@ -73,6 +73,10 @@
     &:hover {
         cursor: pointer;
     }
+    &_work {
+        position: absolute;
+        bottom: -20%;
+    }
 }
 .stars_1 {
     width: 490px;
@@ -93,35 +97,50 @@
 }
 .header__polygon-left {
     fill: #f2f0e8;
+    &_blog {
+        fill: #faf8f0;
+    }
+    &_works {
+        fill: #0d1120;
+        fill-opacity: .7;
+    }
 }
 .header__polygon-right {
     fill: #eae8e2;
+    &_blog {
+        fill: #faf8f0;
+    }
+    &_works {
+        fill: #0d1120;
+        fill-opacity: .7;
+    }
 }
 // .header__rectangle-light {
 //     background: url(../sprites/bg.svg) center top;
 // }
-// .header__rectangle-dark {
-//     background: url(../sprites/bg-dark.svg) center top / cover;
-//     color: #fff;
-//     display: flex;
-//     justify-content: center;
-//     align-items: flex-end;
-//     height: 340px;
-//     position: relative;
-// }
+.header__rectangle-dark {
+    background: url(../sprites/bg-dark.svg) center top / cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 57%;
+    position: relative;
+}
 
-// .header__rectangle-title {
-//     margin-bottom: 56px;
-// }
+.header__rectangle-title {
+    margin-bottom: 56px;
 
-// .header__rectangle-figure {
-//     position: absolute;
-//     bottom: 10px;
-//     //left: 40%;
-// } 
-// .stars2 {
-//         width: 270px;
-//         height: 175px;
-//         background: url(../sprites/stars2-1.svg) center center no-repeat / cover;
-//         opacity: .1;
-// }
+}
+
+.header__rectangle-figure {
+    position: absolute;
+    bottom: 10px;
+    //left: 40%;
+} 
+.stars2 {
+        width: 270px;
+        height: 175px;
+        background: url(../sprites/stars2-1.svg) center center no-repeat / cover;
+        opacity: .1;
+}
