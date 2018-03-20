@@ -1,3 +1,5 @@
-const slider = require('./common/slider');
+//const slider = require('./common/slider');
+const mapGoogle = require('./common/map')
 
-slider(); // инициализируем слайдер
+//slider(); // инициализируем слайдер
+mapGoogle();

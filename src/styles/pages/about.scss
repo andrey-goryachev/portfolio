@@ -238,7 +238,9 @@
 
 .map__center {
     position: absolute;
-    z-index: 1;
+    top: 50%;
+    margin-top: -240px;
+    z-index: 10;
     text-align: center;
     padding: 30px;
     box-sizing: border-box;
@@ -247,6 +249,7 @@
 
 .map__google {
     width: 100%;
+    height: 100vh;
 }
 
 .map__title {

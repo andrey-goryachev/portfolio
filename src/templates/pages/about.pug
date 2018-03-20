@@ -119,15 +119,16 @@ block content
                                             circle.skill__circle-scale.skill-70(r="50" cx="60" cy="60" transform="rotate (-90 60 60)")
                                         .skill__title Bower
     section.map
-        iframe.map__google(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4557.631835071046!2d37.46486261678096!3d55.16899670142938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x413543a89ee1cbd3%3A0xb26ec2464316e12a!2z0JfQtdC80YHQutCw0Y8g0YPQuy4sIDYsINCn0LXRhdC-0LIsINCc0L7RgdC60L7QstGB0LrQsNGPINC-0LHQuy4sIDE0MjMwMA!5e0!3m2!1sru!2sru!4v1521125288352" width="1920" height="1110" frameborder="0" style="border:0" allowfullscreen)
+        .map__google#map
         .map__center.contacts
-
             .map__title.subtitle Контакты
+        
             ul.contacts__list.map__list
                 li.map__item.contacts__item.contacts__item-skype 79852882808@yandex.ru
                 li.map__item.contacts__item.contacts__item-mail 79852882808@yandex.ru
                 li.map__item.contacts__item.contacts__item-phone +7 985 288 28 08
                 li.map__item.contacts__item.contacts__item-address г. Чехов ул. Земская д. 6
+        script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwXItXdBwYG7xJ7I7wuNzUoKve-t0oYMs&callback=initMap")
     footer.footer
         .footer__row-first
             .footer__row-first__left 
