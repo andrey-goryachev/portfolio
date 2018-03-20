@@ -114,6 +114,9 @@
         fill: #0d1120;
         fill-opacity: .7;
     }
+    @include tablets {
+        fill: #faf8f0;
+    }
 }
 // .header__rectangle-light {
 //     background: url(../sprites/bg.svg) center top;

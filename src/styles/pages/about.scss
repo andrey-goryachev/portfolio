@@ -5,7 +5,11 @@
     justify-content: space-between;
     align-items: stretch;
     position: relative;
-    // margin-top: -180px;  
+    @include tablets {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
 }
 
 .about__left {
@@ -22,6 +26,9 @@
         align-items: center;
         padding-left: 10px;
         box-sizing: border-box;
+    }
+    @include tablets {
+        padding: 50px 0;
     }
 }
 
@@ -100,6 +107,13 @@
     @include desktop {
         padding-right: 10px;
     }
+    @include tablets {
+        padding: 50px 0;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
 }
 
 .about__right-title {
@@ -110,6 +124,10 @@
 
 .about__right-text{
     padding-top: 12px;
+    @include tablets {
+        width: 85%;
+        margin-bottom: 50px;
+    }
 }
 
 .skills-list {
@@ -119,13 +137,24 @@
 }
 
 .skills-list__item {
-    //margin-bottom: 40px;
+    @include tablets {
+        margin-bottom: 45px;
+    }
+}
+
+.skills-list__item:last-of-type {
+    @include tablets {
+        margin-bottom: 0;
+    }
 }
 
 .skills-row__title {
     font: 28px Roboto-Medium;
     text-align: left;
     margin-bottom: 20px;
+    @include tablets {
+        text-align: center;
+    }
 }
 
 .skills-row__list {
@@ -136,6 +165,9 @@
     align-items: center;
     align-content: space-around;
     padding: 0;
+    @include tablets {
+        justify-content: center;
+    }
 }
 
 .skills-row__item {
@@ -145,7 +177,7 @@
         margin-right: 0;
     }
     @include desktop {
-        margin-right: 35px;
+        margin-right: 37px;
     }
 }
 
@@ -225,15 +257,16 @@
     justify-content: center;
     align-items: center;
     color: $gray;
+    position: relative;
 }
 
 .contacts {
     width: 580px;
     height: 285px;
-}
-
-.map {
-    position: relative;
+    @include tablets {
+        width: auto;
+        height: none;
+    }
 }
 
 .map__center {
@@ -244,7 +277,11 @@
     text-align: center;
     padding: 30px;
     box-sizing: border-box;
-    background-color: rgba($color: #fff, $alpha: .5)
+    background-color: rgba($color: #fff, $alpha: .5);
+    @include tablets {
+        box-sizing: inherit;
+        padding: 0 30px;
+    }
 }
 
 .map__google {
@@ -263,10 +300,16 @@
     align-items: center;
     align-content: space-between;
     height: 130px;
+    @include tablets {
+        flex-flow: column nowrap;
+    }
 }
 
 .map__item {
     width: 260px;
     height: 50px;
     box-sizing: border-box;
+    @include tablets {
+        margin-bottom: 20px;
+    }
 }
