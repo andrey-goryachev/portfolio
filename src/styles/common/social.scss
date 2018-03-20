@@ -19,37 +19,43 @@
     background: url(../sprites/vk.svg) bottom center no-repeat;
     &:hover {
         background: url(../sprites/vk-blue.svg) bottom center no-repeat;
+        transition: all .3s;
     }
 }
 .social__link-git {
     background: url(../sprites/github.svg) bottom center no-repeat;
-        &:hover {
-            background: url(../sprites/github-blue.svg) bottom center no-repeat;
-        }
+    &:hover {
+        background: url(../sprites/github-blue.svg) bottom center no-repeat;
+        transition: all .3s;
+    }
 }
 .social__link-in {
     background: url(../sprites/in.svg) bottom center no-repeat;
-        &:hover {
-            background: url(../sprites/in-blue.svg) bottom center no-repeat;
-        }
+    &:hover {
+        background: url(../sprites/in-blue.svg) bottom center no-repeat;
+        transition: all .3s;
+    }
 }
 
 .social__link-vk-blue {
     background: url(../sprites/vk-dark-blue.svg) bottom center no-repeat;
     &:hover {
         background: url(../sprites/vk-blue.svg) bottom center no-repeat;
+        transition: all .3s;
     }
 }
 .social__link-git-blue {
     background: url(../sprites/github-dark-blue.svg) bottom center no-repeat;
-        &:hover {
-            background: url(../sprites/github-blue.svg) bottom center no-repeat;
-        }
+    &:hover {
+        background: url(../sprites/github-blue.svg) bottom center no-repeat;
+        transition: all .3s;
+    }
 }
 .social__link-in-blue {
     background: url(../sprites/in-dark-blue.svg) bottom center no-repeat;
-        &:hover {
-            background: url(../sprites/in-blue.svg) bottom center no-repeat;
-        }
+    &:hover {
+        background: url(../sprites/in-blue.svg) bottom center no-repeat;
+        transition: all .3s;
+    }
 }
 
