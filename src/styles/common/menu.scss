@@ -15,5 +15,12 @@
     text-decoration: none;
     &:hover {
         color: $blueLight;
+        transition: all .3s;
+    }
+    @include tablets {
+        font-size: 14px;
+    }
+    @include phones {
+        font-family: Roboto-Medium;
     }
 }

@@ -1,3 +1,11 @@
+.contacts {
+    width: 580px;
+    height: 285px;
+    @include tablets {
+        width: auto;
+        height: auto;
+    }
+}
 
 .contacts__list {
     list-style: none;
@@ -6,31 +14,27 @@
     margin: 0;
 
 }
-.contacts__item {
-    text-align: left;
-}
 
 .contacts__item-skype {
-    line-height: 50px;
-    padding-left: 55px;
     background: url(../sprites/skype.svg) no-repeat left center;
-    background-size: 45px 45px;
 }
 .contacts__item-mail {
-    line-height: 50px;
-    padding-left: 55px;
     background: url(../sprites/mail.svg) no-repeat left center;
-    background-size: 45px 45px;
 }
 .contacts__item-phone {
-    line-height: 50px;
-    padding-left: 55px;
     background: url(../sprites/phone.svg) no-repeat left center;
-    background-size: 45px 45px;
 }
 .contacts__item-address {
+    background: url(../sprites/map_n.svg) no-repeat left center;
+}
+
+.contacts__item {
+    text-align: left;
     line-height: 50px;
     padding-left: 55px;
-    background: url(../sprites/map_n.svg) no-repeat left center;
     background-size: 45px 45px;
+    @include phones {
+        background-size: 35px 35px;
+        padding-left: 45px;
+    }
 }

@@ -52,19 +52,19 @@ block content
                             ul.skills-row__list
                                 li.skills-row__item
                                     .skill
-                                        svg.skill__circle(width="120" height="120")
+                                        svg.skill__circle(width="120" height="120" viewBox="0 0 120 120")
                                             circle(r="50" cx="60" cy="60" fill="none" stroke="#dfdcd5")
                                             circle.skill__circle-scale.skill-90(r="50" cx="60" cy="60" transform="rotate (-90 60 60)")
                                         .skill__title HTML5
                                 li.skills-row__item
                                     .skill
-                                        svg.skill__circle(width="120" height="120")
+                                        svg.skill__circle(width="120" height="120" viewBox="0 0 120 120")
                                             circle(r="50" cx="60" cy="60" fill="none" stroke="#dfdcd5")
                                             circle.skill__circle-scale.skill-80(r="50" cx="60" cy="60" transform="rotate (-90 60 60)")
                                         .skill__title CSS3
                                 li.skills-row__item
                                     .skill
-                                        svg.skill__circle(width="120" height="120")
+                                        svg.skill__circle(width="120" height="120" viewBox="0 0 120 120")
                                             circle(r="50" cx="60" cy="60" fill="none" stroke="#dfdcd5")
                                             circle.skill__circle-scale.skill-30(r="50" cx="60" cy="60" transform="rotate (-90 60 60)")
                                         .skill__title JavaScript
@@ -74,25 +74,25 @@ block content
                             ul.skills-row__list
                                 li.skills-row__item
                                     .skill
-                                        svg.skill__circle(width="120" height="120")
+                                        svg.skill__circle(width="120" height="120" viewBox="0 0 120 120")
                                             circle(r="50" cx="60" cy="60" fill="none" stroke="#dfdcd5")
                                             circle.skill__circle-scale.skill-10(r="50" cx="60" cy="60" transform="rotate (-90 60 60)")
                                         .skill__title PHP
                                 li.skills-row__item
                                     .skill
-                                        svg.skill__circle(width="120" height="120")
+                                        svg.skill__circle(width="120" height="120" viewBox="0 0 120 120")
                                             circle(r="50" cx="60" cy="60" fill="none" stroke="#dfdcd5")
                                             circle.skill__circle-scale.skill-10(r="50" cx="60" cy="60" transform="rotate (-90 60 60)")
                                         .skill__title mySQL
                                 li.skills-row__item
                                     .skill
-                                        svg.skill__circle(width="120" height="120")
+                                        svg.skill__circle(width="120" height="120" viewBox="0 0 120 120")
                                             circle(r="50" cx="60" cy="60" fill="none" stroke="#dfdcd5")
                                             circle.skill__circle-scale.skill-20(r="50" cx="60" cy="60" transform="rotate (-90 60 60)")
                                         .skill__title Node.js & npm
                                 li.skills-row__item
                                     .skill
-                                        svg.skill__circle(width="120" height="120")
+                                        svg.skill__circle(width="120" height="120" viewBox="0 0 120 120")
                                             circle(r="50" cx="60" cy="60" fill="none" stroke="#dfdcd5")
                                             circle.skill__circle-scale.skill-90(r="50" cx="60" cy="60" transform="rotate (-90 60 60)")
                                         .skill__title Mongo.db
@@ -102,24 +102,23 @@ block content
                             ul.skills-row__list
                                 li.skills-row__item
                                     .skill
-                                        svg.skill__circle(width="120" height="120")
+                                        svg.skill__circle(width="120" height="120" viewBox="0 0 120 120")
                                             circle(r="50" cx="60" cy="60" fill="none" stroke="#dfdcd5")
                                             circle.skill__circle-scale.skill-80(r="50" cx="60" cy="60" transform="rotate (-90 60 60)")
                                         .skill__title Git
                                 li.skills-row__item
                                     .skill
-                                        svg.skill__circle(width="120" height="120")
+                                        svg.skill__circle(width="120" height="120" viewBox="0 0 120 120")
                                             circle(r="50" cx="60" cy="60" fill="none" stroke="#dfdcd5")
                                             circle.skill__circle-scale.skill-80(r="50" cx="60" cy="60" transform="rotate (-90 60 60)")
                                         .skill__title Gulp
                                 li.skills-row__item
                                     .skill
-                                        svg.skill__circle(width="120" height="120")
+                                        svg.skill__circle(width="120" height="120" viewBox="0 0 120 120")
                                             circle(r="50" cx="60" cy="60" fill="none" stroke="#dfdcd5")
                                             circle.skill__circle-scale.skill-70(r="50" cx="60" cy="60" transform="rotate (-90 60 60)")
                                         .skill__title Bower
     section.map
-        .map__google#map
         .map__center.contacts
             .map__title.subtitle Контакты
             ul.contacts__list.map__list
@@ -127,6 +126,7 @@ block content
                 li.map__item.contacts__item.contacts__item-mail 79852882808@yandex.ru
                 li.map__item.contacts__item.contacts__item-phone +7 985 288 28 08
                 li.map__item.contacts__item.contacts__item-address г. Чехов ул. Земская д. 6
+        .map__google#map
         script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwXItXdBwYG7xJ7I7wuNzUoKve-t0oYMs&callback=initMap")
     footer.footer
         .footer__row-first
@@ -158,5 +158,8 @@ block content
             
         .footer__row-second 
             .footer__row-second__text © #{name} | создано с любовью в LoftSchool | 2018
+            .footer__row-second__text_phones 
+                p © #{name} 
+                p создано с любовью в LoftSchool | 2018
 
 

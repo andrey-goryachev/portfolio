@@ -44,6 +44,9 @@
 .big-title {
     font: 63px SansusWebissimo;
     text-transform: uppercase;
+    @include phones {
+        font-size: 35px;
+    }
 }
 
 .about__left-title {
@@ -69,6 +72,9 @@
     @include desktop {
         width: 85%;
     }
+    @include phones {
+        width: 100%;
+    }
 }
 
 .about__left-right-title {
@@ -84,6 +90,12 @@
         margin: 20px auto 0;
         width: 90px;
         border-bottom: 3px solid $gray;
+        @include phones {
+            width: 56px;
+        }
+    }
+    @include phones {
+        font-size: 21px;
     }
 }
 
@@ -92,12 +104,21 @@
     @include desktop {
         width: 85%;
     }
+    @include phones {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
 }
 
 .about-text {
     font: 16px Roboto-Regular;
     text-align: left;
     line-height: 1.5;
+    @include phones {
+        font-size: 14px;
+    }
 }
 
 .about__right {
@@ -114,6 +135,7 @@
         justify-content: flex-start;
         align-items: center;
     }
+
 }
 
 .about__right-title {
@@ -127,6 +149,12 @@
     @include tablets {
         width: 85%;
         margin-bottom: 50px;
+    }
+    @include phones {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
     }
 }
 
@@ -155,6 +183,9 @@
     @include tablets {
         text-align: center;
     }
+    @include phones {
+        font-size: 21px;;
+    }
 }
 
 .skills-row__list {
@@ -168,6 +199,9 @@
     @include tablets {
         justify-content: center;
     }
+    @include phones {
+        justify-content: space-around;
+    }
 }
 
 .skills-row__item {
@@ -179,6 +213,9 @@
     @include desktop {
         margin-right: 37px;
     }
+    @include phones {
+        margin-right: 0;
+    }
 }
 
 .skill {
@@ -186,15 +223,20 @@
     height: 120px;
     position: relative;
     @include desktop {
-        position: relative;
         width: 110px;
         height: 110px;
     }
+    
 }
 
 .skill__circle {
     stroke-width: 20;
     fill: none;
+    @include desktop {
+        position: relative;
+        width: 110px;
+        height: 110px;
+    }
 }
 
 .skill__circle-scale {
@@ -248,7 +290,8 @@
     @include desktop {
         height: 14px;
         font-size: 13px;
-        top: 52px;
+        top: 48px;
+        left: 20px;
     }
 }
 
@@ -258,14 +301,8 @@
     align-items: center;
     color: $gray;
     position: relative;
-}
-
-.contacts {
-    width: 580px;
-    height: 285px;
-    @include tablets {
-        width: auto;
-        height: none;
+    @include phones {
+        flex-flow: column nowrap;
     }
 }
 
@@ -282,6 +319,12 @@
         box-sizing: inherit;
         padding: 0 30px;
     }
+    @include phones {
+        position: static;
+        margin-top: 0;
+        padding: 30px 0 30px 10px;
+        width: 100%;
+    }
 }
 
 .map__google {
@@ -291,6 +334,9 @@
 
 .map__title {
     margin-bottom: 30px;
+    @include phones {
+        font-size: 35px;
+    }
 }
 
 .map__list {
@@ -302,6 +348,8 @@
     height: 130px;
     @include tablets {
         flex-flow: column nowrap;
+        justify-content: flex-start;
+        height: auto;
     }
 }
 
@@ -311,5 +359,10 @@
     box-sizing: border-box;
     @include tablets {
         margin-bottom: 20px;
+    }
+    @include phones {
+        margin-bottom: 10px;
+        height: 35px;
+        line-height: 35px;
     }
 }
