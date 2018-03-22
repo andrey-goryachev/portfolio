@@ -31,6 +31,9 @@
 }
 .user__pic {
     text-align: center;
+    @include phones {
+        margin-bottom: 5px;
+    }
 }
 .user__pic-img {
     width: 140px;
@@ -43,17 +46,24 @@
 .user__name {
     color: #fff;
     font: 35px Roboto-Medium;
-    margin-bottom: 5px;
+    //margin-bottom: 5px;
     text-align: center;
     @include phones {
         font-size: 21px;
+        margin-bottom: 10px;
     }
 }
+.user__name.big-title {
+    @include tablets {
+        font-size: 49px;
+    }
+}
+
 .user__info {
     color: #fff;
     font: 16px Roboto-Regular;
     text-align: center;
-    @include phones {
+    @include tablets {
         font-size: 14px;
     }
 }
@@ -74,6 +84,9 @@
     width: 40px;
     height: 40px;
     background: url(../sprites/hamburger.svg) center center no-repeat;
+    @include phones {
+        transform: scale(.65);
+    }
 }
 .arrow-down {
     width: 30px;
@@ -86,9 +99,9 @@
     &:hover {
         cursor: pointer;
     }
-    &_work {
+    &_works {
         position: absolute;
-        bottom: -20%;
+        bottom: 25%;
     }
 }
 .stars_1 {

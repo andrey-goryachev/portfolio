@@ -1,17 +1,23 @@
-header.header
-        .header__socials
-            +socials  
-        .header__menu.hamburger       
-        .header__title
-            .header__user.user
-                .user__pic
-                    img(src="./assets/images/ava.jpg", alt="My photo").user__pic-img
-                .user__description
-                    .user__name #{name}
-                    .user__info #{downNameText}
-            .header__figure.stars_1
-        .header__scroll-btn.arrow-down
-        .header__rectangle
-            svg.header__polygon(viewbox="0 0 1000 85" preserveaspectratio="none")
-                polygon.header__polygon-left(points="0,0   0,86   500.8,86   500.8,75.5")
-                polygon.header__polygon-right(points="1000,0   1000,86   500,86   500,75.5")
+mixin header (title, subtitle, determ, classPolygon, classTitle )
+    header.header
+            .header__socials
+                +socials  
+            .header__menu.hamburger       
+            .header__title
+                .header__user.user
+                    .user__pic
+                        img(src="./assets/images/ava.jpg", alt="My photo").user__pic-img
+                    .user__description
+                        .user__name(class=classTitle) #{title}
+                        .user__info #{subtitle}
+                .header__figure.stars_1
+            .header__scroll-btn.arrow-down(class=`header__scroll-btn_${classPolygon}`)
+            if (determ == 'normal')
+                .header__rectangle               
+                        svg.header__polygon(viewbox="0 0 1000 85" preserveaspectratio="none")
+                            polygon.header__polygon-left(class=`header__polygon-left_${classPolygon}` points="0,0   0,86   500.8,86   500.8,75.5")
+                            polygon.header__polygon-right(class=`header__polygon-right_${classPolygon}` points="1000,0   1000,86   500,86   500,75.5")
+            else 
+                .header__rectangle.header__rectangle-dark
+                    .header__rectangle-title.big-title Мои работы
+                    .header__rectangle-figure.stars2 

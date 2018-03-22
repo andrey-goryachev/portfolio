@@ -13,6 +13,9 @@
     flex: 1;
     width: 30px;
     height: 30px;
+    @include phones {
+        transform: scale(.75);
+    }
 }
 
 .social__link-vk {

@@ -1,51 +1,108 @@
 .blog {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: ((120/1800)*100%) ((275/1800)*100%) ((880/1800)*100%);
+    grid-template-rows: 100%;
+    grid-column-gap: ((120/1800)*100%);
+    grid-template-areas: '. nav blog';
     color: #455a64;
     background-color: #faf8f0;
+    @include desktop {
+        grid-template-columns: ((310/1200)*100%) ((680/1200)*100%);
+        grid-column-gap: ((100/1200)*100%);
+        grid-template-areas: 'nav blog';
+    }
+    @include tabletsL {
+        grid-template-columns: 100%;
+        grid-template-areas: 'blog';
+        padding: 0 24px;
+    }
 }
 .blog_nav {
     list-style: none;
-    }
-.nav {
-    flex: 1;
-    margin-top: 70px;
+    margin: 70px 0 0 0;
+    padding: 0;
 }
+.nav {
+    grid-area: nav;
+    @include desktop {
+        padding-left: 40px;
+    }
+    @include tabletsL {
+        display: none;
+    }
+}
+.nav__item {
+    height: 42px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 25px;
+    &-active { 
+        border-right: 3px solid $blue;
+    }
+    &-active a {
+        color: $blue;
+        font-family: $rb;
+    }
+}
+
 .nav__link {
     display: block;
     text-decoration: none;
     color: #455a64;
     font: 16px Roboto-Regular;
     text-align: right;
-    margin-bottom: 20px;
-    padding: 17px;
-}
-.nav__link-active {
-    color: $blue;
-    font-family: Roboto-Bold;
-    border-right: 3px solid $blue;
+    line-height: 26px;
+    padding-right: 18px;
 }
 .blog__list {
-    flex: 3;
+    grid-area: blog;
     list-style: none;
     margin: 0;
+    padding: 0;
+    margin-top: 60px;
 }
+
+.blog__item {
+    display: none;
+}
+
+.blog__item_active {
+    display: block;
+    margin-bottom: 70px;
+    border-bottom: 5px solid #ecebe4;
+    @include tablets {
+        margin-bottom: 50px;
+    }
+    &:nth-of-type(2) {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+}
+
 .blog__item-title {
-    font: 35px SansusWebissimo;
+    font: 35px $sw;
     color: $gray;
-    margin: 70px 0 0 0;
+    @include tablets {
+        font-size: 30px;
+    }
+    @include phonesL {
+        font-size: 21px;
+    }
 }
 .blog__item-date {
-    font: 16px Roboto-Regular;
+    font: 16px $rr;
     color: $blue;
+    @include tablets {
+        font-size: 14px;
+    }
 }
 .blog__item-text {
-    font: 16px Roboto-Regular;
+    font: 16px $rr;
     line-height: 1.7;
     margin-bottom: 70px;
-}
-.blog__clear {
-    flex: 1;
+    @include tablets {
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
 }

@@ -37,7 +37,7 @@
     position: relative;
     @include desktop {
         flex: 0;
-        margin-bottom: 60px;
+        margin-bottom: 45px;
     }
 }
 
@@ -146,6 +146,7 @@
 
 .about__right-text{
     padding-top: 12px;
+    margin-bottom: 48px;
     @include tablets {
         width: 85%;
         margin-bottom: 50px;
@@ -179,11 +180,11 @@
 .skills-row__title {
     font: 28px Roboto-Medium;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     @include tablets {
         text-align: center;
     }
-    @include phones {
+    @include phonesL {
         font-size: 21px;;
     }
 }
@@ -199,21 +200,21 @@
     @include tablets {
         justify-content: center;
     }
-    @include phones {
+    @include phonesL {
         justify-content: space-around;
     }
 }
 
 .skills-row__item {
     margin-right: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     &:last-of-type {
         margin-right: 0;
     }
     @include desktop {
         margin-right: 37px;
     }
-    @include phones {
+    @include phonesL {
         margin-right: 0;
     }
 }
@@ -301,7 +302,7 @@
     align-items: center;
     color: $gray;
     position: relative;
-    @include phones {
+    @include phonesL {
         flex-flow: column nowrap;
     }
 }
@@ -319,7 +320,7 @@
         box-sizing: inherit;
         padding: 0 30px;
     }
-    @include phones {
+    @include phonesL {
         position: static;
         margin-top: 0;
         padding: 30px 0 30px 10px;
@@ -334,7 +335,7 @@
 
 .map__title {
     margin-bottom: 30px;
-    @include phones {
+    @include phonesL {
         font-size: 35px;
     }
 }
@@ -360,7 +361,7 @@
     @include tablets {
         margin-bottom: 20px;
     }
-    @include phones {
+    @include phonesL {
         margin-bottom: 10px;
         height: 35px;
         line-height: 35px;

@@ -4,7 +4,7 @@ block variables
     - var title = 'Мои работы'
 
 block content
-    include ../common/header_works
+    +header('', '', 'works', 'works', '')
     section.works
         .works-container-left
             ul.works-desc__list

@@ -4,23 +4,34 @@
     padding: 0;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
+    @include tablets {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
 
 .menu__link {
     font: 16px Roboto-Bold;
     color: #fff;
     text-decoration: none;
+    margin-right: 40px;
     &:hover {
         color: $blueLight;
         transition: all .3s;
     }
+    @include desktop {
+        font-family: $rm;
+        font-size: 15px;
+        margin-right: 20px;
+    }
     @include tablets {
         font-size: 14px;
+        margin-right: 5px;
     }
     @include phones {
-        font-family: Roboto-Medium;
+        font-family: $rb;
     }
 }
