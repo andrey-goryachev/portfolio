@@ -29,7 +29,7 @@
 .header__user {
     z-index: 10;
 }
-.user__pic {;
+.user__pic {
     text-align: center;
 }
 .user__pic-img {
@@ -96,7 +96,7 @@
     height: 290px;
     background: url(../sprites/stars1.svg) center center no-repeat / cover;
     opacity: .1;    
-    @include phones {
+    @include tablets {
         width: 281px;
         height: 167px;
     }
@@ -105,7 +105,7 @@
     position: absolute;
     top: 50%;
     margin-top: -160px;
-    @include phones {
+    @include tablets {
         margin-top: -126px;
     }
 }

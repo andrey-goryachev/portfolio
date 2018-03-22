@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const pug = require('gulp-pug');
 
 const autoprefixer = require('gulp-autoprefixer');
+const cssunit = require('gulp-css-unit')
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
@@ -43,11 +44,11 @@ const paths = {
         dest: 'build/assets/styles/'
     },    
     images: {
-        src: 'src/images/**/*.*',
+        src: 'src/assets/images/**/*.*',
         dest: 'build/assets/images/'
     },
     icons: {
-        src: 'src/icons/*.svg*',
+        src: 'src/assets/icons/*.svg*',
         dest: 'build/assets/sprites/'
     },
     scripts: {
@@ -55,11 +56,11 @@ const paths = {
         dest: 'build/assets/scripts/'
     },
     fonts: {
-        src: 'src/fonts/*.*',
+        src: 'src/assets/fonts/*.*',
         dest: 'build/assets/fonts/'
     },
     video: {
-        src: 'src/video/*.*',
+        src: 'src/assets/video/*.*',
         dest: 'build/assets/video/'
     }
 }
@@ -79,6 +80,10 @@ function styles() {
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
+        }))
+        .pipe(cssunit({
+            type: 'px-to-rem',
+            rootSize: 16
         }))
         .pipe(sourcemaps.write())
         .pipe(rename({suffix: '.min'}))

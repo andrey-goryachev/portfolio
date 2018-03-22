@@ -4,31 +4,7 @@ block variables
     - var title = 'Мои работы'
 
 block content
-    header.header
-        .header__socials
-            ul.social
-                li.social__item
-                    a.social__link.social__link-vk(href="https://vk.com/ag_888" target="_blank")
-                li.social__item
-                    a.social__link.social__link-git(href="https://github.com/andrey-goryachev" target="_blank")
-                li.social__item
-                    a.social__link.social__link-in(href="https://github.com/andrey-goryachev" target="_blank")
-        .header__menu.hamburger
-        .header__title
-            .header__user.user
-                .user__pic
-                    img(src="./assets/images/ava.jpg", alt="My photo").user__pic-img
-                .user__description
-                    .user__name #{name}
-                    .user__info #{downNameText}
-            .header__figure.stars_1
-            .header__scroll-btn_work.arrow-down
-        .header__rectangle.header__rectangle-dark
-            //- svg.header__polygon(viewbox="0 0 1000 340" preserveaspectratio="none")
-            //-     polygon.header__polygon-left_works(points="0,0   0,340   500.8,340   500.8,75.5")
-            //-     polygon.header__polygon-right_works(points="1000,0   1000,340   500,340   500,75.5")
-            .header__rectangle-title.big-title Мои работы
-            .header__rectangle-figure.stars2
+    include ../common/header_works
     section.works
         .works-container-left
             ul.works-desc__list
@@ -89,33 +65,4 @@ block content
                     input.comments-form__btn(type="button", value="Очистить") 
         .comments-scroll-btn
             .arrow-up
-    footer.footer
-        .footer__row-first
-            .footer__row-first__left 
-                .footer__description-text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
-            .footer__row-first-center
-                    ul.footer__menu.menu
-                        li.footer__menu-item.menu__item
-                            a.menu__link(href="my-works.html") Мои работы
-                        li.footer__menu-item.menu__item
-                            a.menu__link(href="about.html") Обо мне
-                        li.footer__menu-item.menu__item
-                            a.menu__link(href="blog.html") Блог
-                        li.footer__menu-item.menu__item
-                            a.menu__link(href="index.html") Авторизация 
-                    ul.footer__social.social
-                        li.social__item
-                            a.social__link.social__link-vk(href="https://vk.com/ag_888" target="_blank")
-                        li.social__item
-                            a.social__link.social__link-git(href="https://github.com/andrey-goryachev" target="_blank")
-                        li.social__item
-                            a.social__link.social__link-in(href="https://github.com/andrey-goryachev" target="_blank")
-            .footer__row-first__right
-                ul.contacts__list_footer
-                        li.contacts__item_footer skype_kdn
-                        li.contacts__item_footer 79852882808@yandex.ru
-                        li.contacts__item_footer +7 985 288 28 08
-                        li.contacts__item_footer г. Чехов ул. Земская д. 6
-            
-        .footer__row-second
-            .footer__row-second__text © Андрей Горячев | создано с любовью в LoftSchool | 2018
+    +footer

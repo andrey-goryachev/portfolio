@@ -1,0 +1,17 @@
+header.header
+        .header__socials
+            +socials  
+        .header__menu.hamburger       
+        .header__title
+            .header__user.user
+                .user__pic
+                    img(src="./assets/images/ava.jpg", alt="My photo").user__pic-img
+                .user__description
+                    .user__name #{name}
+                    .user__info #{downNameText}
+            .header__figure.stars_1
+        .header__scroll-btn.arrow-down
+        .header__rectangle
+            svg.header__polygon(viewbox="0 0 1000 85" preserveaspectratio="none")
+                polygon.header__polygon-left(points="0,0   0,86   500.8,86   500.8,75.5")
+                polygon.header__polygon-right(points="1000,0   1000,86   500,86   500,75.5")
