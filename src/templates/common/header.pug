@@ -2,7 +2,10 @@ mixin header (title, subtitle, determ, classPolygon, classTitle )
     header.header
             .header__socials
                 +socials  
-            .header__menu.hamburger       
+            .hamburger
+            .header-wrap-menu.off
+                .cross
+                +menu('header__menu', 'header__menu-item','header__menu-link')
             .header__title
                 .header__user.user
                     .user__pic

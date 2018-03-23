@@ -4,15 +4,7 @@ mixin footer (clsName)
                 .footer__row-first__left 
                     .footer__description-text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
                 .footer__row-first-center
-                        ul.footer__menu.menu
-                            li.footer__menu-item.menu__item
-                                a.menu__link(href="my-works.html") Мои работы
-                            li.footer__menu-item.menu__item
-                                a.menu__link(href="about.html") Обо мне
-                            li.footer__menu-item.menu__item
-                                a.menu__link(href="blog.html") Блог
-                            li.footer__menu-item.menu__item
-                                a.menu__link(href="index.html") Авторизация 
+                        +menu('footer__menu menu', 'footer__menu-item menu__item', 'menu__link')        
                         +socials('footer__social')
                 .footer__row-first__right
                     ul.contacts__list_footer
