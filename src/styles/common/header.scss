@@ -119,12 +119,13 @@
     top: 50%;
     margin-top: -160px;
     @include tablets {
-        margin-top: -126px;
+        margin-top: -100px;
     }
 }
 .header__rectangle {
     width: 100%;
 }
+
 .header__polygon {
     display: block;
 }
@@ -160,21 +161,35 @@
     align-items: flex-end;
     height: 57%;
     position: relative;
+    @include tablets {
+        height: 30%;
+    }
 }
 
 .header__rectangle-title {
     margin-bottom: 56px;
+    @include tablets {
+        margin-bottom: 38px;
+    }
+}
 
+.header__rectangle-title.big-title {
+    @include tablets {
+        font-size: 49px;
+    }
 }
 
 .header__rectangle-figure {
     position: absolute;
     bottom: 10px;
-    //left: 40%;
 } 
 .stars2 {
-        width: 270px;
-        height: 175px;
-        background: url(../sprites/stars2-1.svg) center center no-repeat / cover;
-        opacity: .1;
+    width: 270px;
+    height: 175px;
+    background: url(../sprites/stars2-1.svg) center center no-repeat / cover;
+    opacity: .1;
+    @include tablets {
+        width: 165px;
+        height: 110px;
+    }
 }

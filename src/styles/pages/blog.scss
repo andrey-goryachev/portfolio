@@ -32,7 +32,7 @@
     }
 }
 .nav__item {
-    height: 42px;
+    //height: 42px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -54,6 +54,7 @@
     text-align: right;
     line-height: 26px;
     padding-right: 18px;
+    box-sizing: border-box;
 }
 .blog__list {
     grid-area: blog;
