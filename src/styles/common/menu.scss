@@ -14,7 +14,7 @@
 }
 
 .menu__link {
-    font: 16px Roboto-Bold;
+    font-family: $rb;
     color: #fff;
     text-decoration: none;
     margin-right: 40px;
@@ -24,11 +24,9 @@
     }
     @include desktop {
         font-family: $rm;
-        font-size: 15px;
         margin-right: 20px;
     }
     @include tablets {
-        font-size: 14px;
         margin-right: 5px;
     }
     @include phones {

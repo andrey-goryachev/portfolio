@@ -46,26 +46,17 @@
 .user__name {
     color: #fff;
     font: 35px Roboto-Medium;
-    //margin-bottom: 5px;
+    margin-bottom: 5px;
     text-align: center;
     @include phones {
-        font-size: 21px;
         margin-bottom: 10px;
-    }
-}
-.user__name.big-title {
-    @include tablets {
-        font-size: 49px;
     }
 }
 
 .user__info {
     color: #fff;
-    font: 16px Roboto-Regular;
+    font-family: $rr;
     text-align: center;
-    @include tablets {
-        font-size: 14px;
-    }
 }
 .header__menu {
     position: absolute;
@@ -170,12 +161,6 @@
     margin-bottom: 56px;
     @include tablets {
         margin-bottom: 38px;
-    }
-}
-
-.header__rectangle-title.big-title {
-    @include tablets {
-        font-size: 49px;
     }
 }
 

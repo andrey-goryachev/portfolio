@@ -19,7 +19,7 @@
 }
 
 .footer__row-first {
-    font: 16px Roboto-Light;
+    font-family: $rl;
     display: flex;
     background-color: rgba(0, 0, 0, .7);
     color: #fff;
@@ -32,7 +32,6 @@
     @include tabletsL {
         flex-wrap: wrap;
         height: 190px;
-        font-size: 14px;
     }
     @include phonesL {
         flex-flow: column nowrap;
@@ -162,9 +161,6 @@
 }
 .contacts__item_footer {
     margin-bottom: 10px;
-    @include tablets {
-        font-size: 14px;
-    }
 }
 
 .footer__row-second {
@@ -183,11 +179,8 @@
 }
 .footer__row-second__text {
     color: #fff;
-    font: 16px Roboto-Light;
+    font-family: $rl;
     text-align: center;
-    @include tablets {
-        font-size: 14px;
-    }
     @include phones {
         display: none;
     }
@@ -195,7 +188,7 @@
 
 .footer__row-second__text_phones {
     color: #fff;
-    font: 14px Roboto-Light;
+    font-family: $rl;
     text-align: center;
     display: none;
     @include phones {

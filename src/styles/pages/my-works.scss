@@ -53,14 +53,13 @@
     margin: 0 0 25px 0;
     @include tablets {
         margin-bottom: 20px;
-        font-size: 30px;
         width: 100%;
     }
 }
 
 .works-desc__text {
     color: $blue;
-    font: 1rem Roboto-Medium;
+    font: 1rem $rm;
     text-align: center;
     text-transform: uppercase;
     padding: 0;
@@ -73,7 +72,7 @@
 .works-desc__link {
     display: inline-block;
     text-decoration: none;
-    font: 1rem Roboto-Medium;
+    font: 1rem $rm;
     color: #fff;
     background: url(../sprites/link.svg) no-repeat 16px center / 20px 20px ;
     background-color: $blueLight;
@@ -157,7 +156,6 @@
     margin: 0 auto;
     @include phonesL {
         width: 100%;
-        font-size: 35px;
         margin-bottom: 20px;
     }
 }
@@ -178,7 +176,7 @@
 }
 .comments__item {
     width: 380px;
-    font: 1rem Roboto-Italic;
+    font: 1rem $ri;
     line-height: 26px;
     @include phonesL {
         width: 100%;
@@ -194,21 +192,9 @@
 }
 .comments__item-text {
     margin-bottom: 30px;
-    @include phonesL {
-        font-size: 14px;
-    }
 }
 .comments__item-author {
-    font: 16px Roboto-BoldItalic;
-    @include phonesL {
-        font-size: 14px;
-    }
-}
-
-.comments__item-position {
-    @include phonesL {
-        font-size: 14px;
-    }
+    font-family: $rbi;
 }
 
 //form
@@ -237,7 +223,7 @@
     width: 100%;
     padding: 1rem;
     box-sizing: border-box;
-    font: 1rem Roboto-Regular;
+    font: 1rem $rr;
     border: none;
     color: #fff;
     outline: none;
@@ -272,7 +258,7 @@
     width: 100%;
     padding: 1rem;
     box-sizing: border-box;
-    font: 1rem Roboto-Regular;
+    font: 1rem $rr;
     border: none;
     color: #fff;
     outline: none;

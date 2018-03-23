@@ -50,7 +50,7 @@
     display: block;
     text-decoration: none;
     color: #455a64;
-    font: 16px Roboto-Regular;
+    font-family: $rb;
     text-align: right;
     line-height: 26px;
     padding-right: 18px;
@@ -84,26 +84,16 @@
 .blog__item-title {
     font: 35px $sw;
     color: $gray;
-    @include tablets {
-        font-size: 30px;
-    }
-    @include phonesL {
-        font-size: 21px;
-    }
 }
 .blog__item-date {
-    font: 16px $rr;
+    font-family: $rr;
     color: $blue;
-    @include tablets {
-        font-size: 14px;
-    }
 }
 .blog__item-text {
-    font: 16px $rr;
+    font-family: $rr;
     line-height: 1.7;
     margin-bottom: 70px;
     @include tablets {
-        font-size: 14px;
         margin-bottom: 50px;
     }
 }
