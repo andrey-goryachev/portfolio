@@ -4,10 +4,38 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    background: url(../images/welcome-bg.jpg) bottom center no-repeat;
-    background-size: cover;
+    // background: url(../images/sky-bg.jpg) bottom center no-repeat;
+    // background-size: cover;
     height: 100vh;
+    min-height: 650px;
 }
+
+.scroll-parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../images/sky-bg.jpg) bottom center repeat-y; 
+    background-size: cover;
+}
+
+.scroll-parallax__image {
+    position: absolute;
+    bottom: -70px;
+    display: block;
+    width: 100%;
+    @include desktop {
+        bottom: -40px;
+    }
+    @include tabletsL {
+        bottom: -35px;
+    }
+    @include tabletsL {
+        bottom: -30px;
+    }
+}
+
 .header__socials {
     position: absolute;
     top: 30px;
@@ -26,23 +54,28 @@
     align-items: center;
     position: relative;
 }
+
 .header__user {
     z-index: 10;
 }
+
 .user__pic {
     text-align: center;
     @include phones {
         margin-bottom: 5px;
     }
 }
+
 .user__pic-img {
     width: 140px;
     height: 140px;
     border-radius: 50%;
 }
+
 .user__description {
     padding-top: 20px;
 }
+
 .user__name {
     color: #fff;
     font: 35px Roboto-Medium;
@@ -135,11 +168,13 @@
         right: 10px;
     }
 }
+
 .arrow-down {
     width: 30px;
     height: 20px;
     background: url(../sprites/arrow_down.svg) center center no-repeat;
 }
+
 .header__scroll-btn {
     position: absolute;
     bottom: 10%;
@@ -151,6 +186,7 @@
         bottom: 25%;
     }
 }
+
 .stars_1 {
     width: 490px;
     height: 290px;
@@ -161,6 +197,7 @@
         height: 167px;
     }
 }
+
 .header__figure {
     position: absolute;
     top: 50%;
@@ -169,8 +206,10 @@
         margin-top: -100px;
     }
 }
+
 .header__rectangle {
     width: 100%;
+    z-index: 10;
 }
 
 .header__polygon {
@@ -186,6 +225,7 @@
         fill-opacity: .7;
     }
 }
+
 .header__polygon-right {
     fill: #eae8e2;
     &_blog {

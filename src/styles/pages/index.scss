@@ -81,6 +81,7 @@
         background-color: $blueLight;
         border-color: $blueLight;
         cursor: pointer;
+        transition: all .4s;
     }
     @include phonesL {
         align-self: center;
@@ -155,6 +156,7 @@
     background-color: $blueLight;
     &:hover {
         background-color: $blue;
+        transition: all .4s;
     };
     height: 45px;
     line-height: 45px;

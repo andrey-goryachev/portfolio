@@ -1,6 +1,5 @@
 var layer = document.getElementById('parallax__layer');
 
-
 var moveLayers = function (e) {
     var initialX = (window.innerWidth / 2) - e.pageX;
     var initialY = (window.innerHeight / 2) - e.pageY;
@@ -16,7 +15,9 @@ var moveLayers = function (e) {
     image.style.bottom = '-' + bottomPosition + 'px';
 };
 
+if (layer) {
+    var parallaxFunc = window.addEventListener('mousemove', moveLayers);
+}
 
-var parallaxFunc = window.addEventListener('mousemove', moveLayers);
 
 module.exports = parallaxFunc;

@@ -1,6 +1,8 @@
-const mapGoogle = require('./common/map')
-const parallax = require('./common/parallax')
+const mapGoogle = require('./common/map');
+const parallaxIndex = require('./common/parallaxIndex');
+const parallaxScroll = require('./common/parallaxScroll');
 
 
-parallax();
+parallaxIndex();
+parallaxScroll();
 mapGoogle();
