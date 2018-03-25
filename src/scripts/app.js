@@ -1,5 +1,6 @@
-//const slider = require('./common/slider');
 const mapGoogle = require('./common/map')
+const parallax = require('./common/parallax')
 
-//slider(); // инициализируем слайдер
+
+parallax();
 mapGoogle();

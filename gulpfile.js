@@ -11,6 +11,7 @@ const del = require('del');
 
 const browserSync = require('browser-sync').create();
 
+const plumber = require('gulp-plumber');
 const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
@@ -132,6 +133,7 @@ function sprite() {
 // webpack
 function scripts() {
     return gulp.src('src/scripts/app.js')
+        .pipe(plumber())
         .pipe(gulpWebpack(webpackConfig, webpack)) 
         .pipe(gulp.dest(paths.scripts.dest));
 }
@@ -144,7 +146,7 @@ function watch() {
     gulp.watch(paths.scripts.src, scripts);
     gulp.watch(paths.fonts.src, fonts);
     gulp.watch(paths.icons.src, sprite);
-    //gulp.watch(paths.video.src, video);
+    gulp.watch(paths.video.src, video);
 }
 
 // переносим шрифты
@@ -153,11 +155,11 @@ function fonts() {
         .pipe(gulp.dest(paths.fonts.dest));
 }
 
-// // переносим видео
-// function video() {
-//     return gulp.src(paths.video.src)
-//         .pipe(gulp.dest(paths.video.dest));
-// }
+// переносим видео
+function video() {
+    return gulp.src(paths.video.src)
+        .pipe(gulp.dest(paths.video.dest));
+}
 
 // локальный сервер + livereload (встроенный)
 function server() {
@@ -174,11 +176,12 @@ exports.clean = clean;
 exports.minimg = minimg;
 exports.fonts = fonts;
 exports.sprite = sprite;
+exports.video = video;
 
 
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, minimg, scripts, fonts, sprite),
+    gulp.parallel(styles, templates, minimg, scripts, fonts, sprite, video),
     gulp.parallel(watch, server)
 ));
