@@ -21,5 +21,3 @@ var clickWrap = function (event) {
 var flipper = btnAuth.addEventListener('click', clickBtn);
 var flipIgnore = wrapperIndex.addEventListener('click', clickIgnore);
 var flipBack = wrapperIndex.addEventListener('click', clickWrap);
-
-

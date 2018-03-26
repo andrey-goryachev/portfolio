@@ -4,6 +4,9 @@
     left: 0;
     min-width: 100%;
     min-height: 100%;
+    @include tabletsL {
+        display: none;
+    }
 }
 .parallax {
     position: fixed;
@@ -12,6 +15,9 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    @include tabletsL {
+        display: none;
+    }
 }
 
 .parallax__layer {
@@ -46,15 +52,8 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
-    @include desktop {
-        padding: 25px 20px 43px;
-    }
-    @include tablets {
-        padding: 20px 20px 43px;
-    }
-    @include phones {
-        padding: 10px;
+    @include tabletsL {
+        background: url(../images/welcome-bg.jpg) no-repeat bottom / cover;
     }
 }
 
@@ -64,7 +63,7 @@
 
 
 
-// welcome
+
 .btn-auth {
     position: absolute;
     top: 25px;
@@ -74,15 +73,26 @@
     background-color: transparent;
     border: 1px solid #fff;
     padding: 12px 28px;
-    align-self: flex-end;
+    box-sizing: border-box;
     &:hover {
         background-color: $blueLight;
         border-color: $blueLight;
         cursor: pointer;
         transition: all .4s;
     }
+    @include desktop {
+        top: 25px;
+        right: 20px;
+    }
+    @include tabletsL {
+        top: 20px;
+    }
     @include phonesL {
-        align-self: center;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 14px;
+        padding: 12px 18px;
     }
 }
 
@@ -92,16 +102,18 @@
     min-height: 400px;
     transition: 1s;
     transform-style: preserve-3d;
+    @include tablets {
+        width: 348px;
+    }
     @include phonesL {
-        width: 90%;
+        width: 300px;
     }
-    @include phones {
-        width: 100%;
-    }
-    // &:hover {
-    //     transform: rotateY(180deg);
+    // @include phones {
+    //     width: 100%;
     // }
 }
+
+// welcome
 
 .welcome {
     // width: 380px;
@@ -126,19 +138,33 @@
     background: url(../images/ava.jpg) no-repeat center center / contain;
     border-radius: 50%;
     margin-bottom: 10px;
+    @include phonesL {
+        margin-bottom: 20px;
+    }
 }
 
 .welcome__title {
     font: 32px $rm;
     margin: 0 0 10px;
+    @include tablets {
+        font-size: 28px;
+    }
+    @include phonesL {
+        font-size: 21px;
+    }
 }
 
 .welcome__text {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     font-family: $rr;
+    @include phonesL {
+        font-size: 14px;
+    }
 }
 
-@import '../common/social.scss';
+.index-socials {
+    
+}
 
 .menu-welcome {
     list-style: none;
@@ -180,6 +206,9 @@
     line-height: 45px;
     text-align: center;
     font-family: $rm;
+    @include phonesL {
+        font-size: 14px;
+    }
 }
 
 
@@ -203,6 +232,9 @@
     text-align: center;
     margin: 0 0 33px 0;
     text-transform: uppercase;
+    @include tablets {
+        font-size: 30px;
+    }
 }
 
 .form-auth__wrap-input {
@@ -354,5 +386,7 @@
     font-family: $rl;
     @include phonesL {
         text-align: center;
+        font-size: 14px;
+        line-height: 1.7;
     }
 }
