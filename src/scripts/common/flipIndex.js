@@ -14,8 +14,11 @@ var clickIgnore = function (event) {
 };
 
 var clickWrap = function (event) {
-    btnAuth.style.left = 'auto';
-    flipContainer.style.transform = 'rotateY(360deg)';
+    var target = event.target.id;
+    if (target == 'wrapper-index') {
+        btnAuth.style.left = 'auto';
+        flipContainer.style.transform = 'rotateY(360deg)';
+    }
 };
 
 var flipper = btnAuth.addEventListener('click', clickBtn);
