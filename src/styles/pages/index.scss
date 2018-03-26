@@ -57,13 +57,6 @@
     }
 }
 
-.off {
-    display: none
-}
-
-
-
-
 .btn-auth {
     position: absolute;
     top: 25px;
@@ -108,15 +101,11 @@
     @include phonesL {
         width: 300px;
     }
-    // @include phones {
-    //     width: 100%;
-    // }
 }
 
 // welcome
 
 .welcome {
-    // width: 380px;
     position: absolute;
     width: 100%;
     backface-visibility: hidden;
@@ -162,10 +151,6 @@
     }
 }
 
-.index-socials {
-    
-}
-
 .menu-welcome {
     list-style: none;
     font: 1rem $rm;
@@ -177,6 +162,7 @@
     grid-template-areas: "works about blog"
 
 }
+
 .menu-welcome__btn {
     &_works {
         grid-area: works;
@@ -227,6 +213,7 @@
     padding: 35px 20px;
     box-sizing: border-box;
 }
+
 .auth__title {
     font: 35px SansusWebissimo;
     text-align: center;
