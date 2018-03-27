@@ -269,9 +269,15 @@
 }
 
 .header__rectangle-title {
+    font: 63px $sw;
+    text-transform: uppercase;
     margin-bottom: 56px;
     @include tablets {
         margin-bottom: 38px;
+        font-size: 48px;
+    }
+    @include phonesL {
+        font-size: 35px;
     }
 }
 

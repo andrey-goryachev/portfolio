@@ -55,6 +55,9 @@
         margin-bottom: 20px;
         width: 100%;
     }
+    @include phonesL {
+        font-size: 21px;
+    }
 }
 
 .works-desc__text {
@@ -67,6 +70,9 @@
     @include tablets {
         margin-bottom: 30px;
     }
+    @include phonesL {
+        font-size: 14px;
+    }
 }
 
 .works-desc__link {
@@ -77,6 +83,9 @@
     background: url(../sprites/link.svg) no-repeat 16px center / 20px 20px ;
     background-color: $blueLight;
     padding: 15px 20px 15px 50px;
+    @include phonesL {
+        font-size: 14px;
+    }
 }
 
 .works-container-right {
@@ -147,7 +156,7 @@
     color: #fff;
     padding: 70px 0 180px 0;
     @include phonesL {
-        padding: 40px 0 0 0;
+        padding: 40px 10px 0 10px;
     }
 }
 .comments__title {
@@ -155,6 +164,7 @@
     width: 370px;
     margin: 0 auto;
     @include phonesL {
+        font-size: 35px;
         width: 100%;
         margin-bottom: 20px;
     }
@@ -181,6 +191,7 @@
     @include phonesL {
         width: 100%;
         margin-bottom: 40px;
+        font-size: 14px;
     }
 }
 
@@ -227,6 +238,9 @@
     border: none;
     color: #fff;
     outline: none;
+    @include phonesL {
+        font-size: 14px;
+    }
 }
 .comments-form__text {
     
@@ -258,7 +272,7 @@
     width: 100%;
     padding: 1rem;
     box-sizing: border-box;
-    font: 1rem $rr;
+    font: 1rem $rm;
     border: none;
     color: #fff;
     outline: none;

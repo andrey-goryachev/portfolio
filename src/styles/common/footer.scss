@@ -4,8 +4,8 @@
     margin-top: -185px;
     position: relative;
     @include tabletsL {
-        height: 225px;
-        margin-top: -225px;
+        height: 245px;
+        margin-top: -245px;
     }
     @include phonesL {
         height: auto;
@@ -31,7 +31,7 @@
     height: 150px;
     @include tabletsL {
         flex-wrap: wrap;
-        height: 190px;
+        height: 210px;
     }
     @include phonesL {
         flex-flow: column nowrap;
@@ -63,6 +63,9 @@
         text-align: center;
         padding-bottom: 20px;
         border-bottom: 3px solid #63656d;
+    }
+    @include tabletsL {
+        font: 14px $rl;
     }
     @include phonesL {
         text-align: left;
@@ -138,6 +141,7 @@
     box-sizing: border-box;
     @include tabletsL {
         width: 50%;
+        padding-left: 0;
     }
     @include phonesL {
         width: 100%;
@@ -162,6 +166,9 @@
 }
 .contacts__item_footer {
     margin-bottom: 10px;
+    @include tabletsL {
+        font: 14px $rl;
+    }
 }
 
 .footer__row-second {
@@ -182,6 +189,9 @@
     color: #fff;
     font-family: $rl;
     text-align: center;
+    @include tabletsL {
+        font-size: 14px;
+    }
     @include phones {
         display: none;
     }
@@ -192,6 +202,9 @@
     font-family: $rl;
     text-align: center;
     display: none;
+    @include tabletsL {
+        font-size: 14px;
+    }
     @include phones {
         display: block;
     }

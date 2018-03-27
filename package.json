@@ -33,5 +33,7 @@
     "uglifyjs-webpack-plugin": "^1.2.2",
     "webpack": "^4.1.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "vue": "^2.5.16"
+  }
 }

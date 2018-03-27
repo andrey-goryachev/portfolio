@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const config = {
+    mode: 'development',
     output: {
         filename: 'bundle.js'
     },
@@ -16,6 +17,11 @@ const config = {
             exclude: /node_modules/,
             loader: "babel-loader"
         }]
+    },
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js'
+        }
     }
 };
 

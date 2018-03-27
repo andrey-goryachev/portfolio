@@ -2,25 +2,29 @@ var btnAuth = document.getElementById('btn-auth'),
     flipContainer = document.getElementById('index-flip-container'),
     wrapperIndex = document.getElementById('wrapper-index');
 
-var clickCount = 1;
-var clickBtn = function(event) {
-    event.stopPropagation();
-        flipContainer.style.transform = 'rotateY(180deg)';
-        btnAuth.style.left = '9999px';
+
+var clickBtn = function(e) {
+    e.stopPropagation();
+    flipContainer.classList.add('index-flip-container_rotate');
+    btnAuth.classList.add('btn-auth_left');
 };
 
-var clickIgnore = function (event) {
-    event.stopPropagation();
+var clickIgnore = function (e) {
+    e.stopPropagation();
 };
 
-var clickWrap = function (event) {
-    var target = event.target.id;
-    if (target == 'wrapper-index') {
-        btnAuth.style.left = 'auto';
-        flipContainer.style.transform = 'rotateY(360deg)';
+var clickWrap = function (e) {
+    
+    var target = e.target.id;
+    if (target == 'wrapper-index' || 'btn-index-in-main') {
+        btnAuth.classList.remove('btn-auth_left');
+        flipContainer.classList.remove('index-flip-container_rotate');
     }
 };
 
-var flipper = btnAuth.addEventListener('click', clickBtn);
-var flipIgnore = wrapperIndex.addEventListener('click', clickIgnore);
-var flipBack = wrapperIndex.addEventListener('click', clickWrap);
+if (btnAuth) {
+    btnAuth.addEventListener('click', clickBtn);
+    wrapperIndex.addEventListener('click', clickIgnore);
+    wrapperIndex.addEventListener('click', clickWrap);
+}
+

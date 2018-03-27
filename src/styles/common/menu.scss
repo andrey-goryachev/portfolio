@@ -4,32 +4,34 @@
     padding: 0;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     width: 100%;
     @include tablets {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: space-between;
     }
 }
+
 
 .menu__link {
     font-family: $rb;
     color: #fff;
     text-decoration: none;
-    margin-right: 40px;
+    margin-right: 10px;
     &:hover {
         color: $blueLight;
         transition: all .3s;
     }
-    @include desktop {
+    @include mw1300 {
         font-family: $rm;
-        margin-right: 20px;
     }
-    @include tablets {
+    @include tabletsL {
         margin-right: 5px;
+        font: 14px $rm;
     }
     @include phones {
+        margin-right: 0;
         font-family: $rb;
     }
 }

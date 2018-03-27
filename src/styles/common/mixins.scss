@@ -1,4 +1,10 @@
 
+@mixin mw1300() {
+    @media screen and (max-width: 1300px) {
+        @content;
+    }
+}
+
 @mixin desktop() {
     @media screen and (max-width: 1200px) {
         @content;

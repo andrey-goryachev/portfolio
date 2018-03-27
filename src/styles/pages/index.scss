@@ -73,6 +73,9 @@
         cursor: pointer;
         transition: all .4s;
     }
+    &_left {
+        left: 9999px;
+    }
     @include desktop {
         top: 25px;
         right: 20px;
@@ -95,6 +98,10 @@
     min-height: 400px;
     transition: 1s;
     transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    &_rotate {
+        transform: rotateY(180deg);  
+    }
     @include tablets {
         width: 348px;
     }
@@ -360,6 +367,7 @@
     background-color: $blueLight;
     &:hover {
         background-color: $blue;
+        cursor: pointer;
     }
     box-sizing: border-box;
 }
