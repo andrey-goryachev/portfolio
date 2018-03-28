@@ -1,30 +1,27 @@
-var btnAuth = document.getElementById('btn-auth'),
-    flipContainer = document.getElementById('index-flip-container'),
-    wrapperIndex = document.getElementById('wrapper-index');
-
-
-var clickBtn = function(e) {
-    e.stopPropagation();
-    flipContainer.classList.add('index-flip-container_rotate');
-    btnAuth.classList.add('btn-auth_left');
+export default function flip () {
+    const start = (btn, flipcontainer) => {
+        btn.classList.add('btn-auth_left');
+        flipcontainer.classList.add('index-flip-container_rotate');
+    }; 
+    const end = (btn, flipcontainer) => {
+        btn.classList.remove('btn-auth_left');
+        flipcontainer.classList.remove('index-flip-container_rotate');
+    }; 
+    return {
+        init: (function () {
+            const btnAuth = document.getElementById('btn-auth'); 
+            const flipContainer = document.getElementById('index-flip-container'); 
+            const btnBack = document.getElementById('btnMain');
+            
+            btnAuth.addEventListener('click', (e) => {
+                e.preventDefault();
+                start(btnAuth, flipContainer);
+                
+            });
+            btnBack.addEventListener('click', (e) => {
+                e.preventDefault();
+                end(btnAuth, flipContainer);
+            });
+        }())
+    };
 };
-
-var clickIgnore = function (e) {
-    e.stopPropagation();
-};
-
-var clickWrap = function (e) {
-    
-    var target = e.target.id;
-    if (target == 'wrapper-index' || 'btn-index-in-main') {
-        btnAuth.classList.remove('btn-auth_left');
-        flipContainer.classList.remove('index-flip-container_rotate');
-    }
-};
-
-if (btnAuth) {
-    btnAuth.addEventListener('click', clickBtn);
-    wrapperIndex.addEventListener('click', clickIgnore);
-    wrapperIndex.addEventListener('click', clickWrap);
-}
-

@@ -1,32 +1,32 @@
-var parallaxScroll = (function() {
-    var bg = document.querySelector('.scroll-parallax__layer'),
-        image = document.querySelector('.scroll-parallax__image'),
-        user = document.querySelector('.user');
+export default function parallaxScroll () {
+    const parallaxStart = (function () {
+        const bg = document.querySelector('.scroll-parallax__layer');
+        const image = document.querySelector('.scroll-parallax__image');
+        const user = document.querySelector('.user');
+        return {
+            move: function (block, windowScroll, strafeAmount) {
+                const strafe = windowScroll / -strafeAmount + '%';
+                const transformString = 'translate3d(0,' + strafe + ',0)';
 
-    return {
-        move: function(block, windowScroll, strafeAmount) {
-            var strafe = windowScroll / -strafeAmount + '%';
-            var transformString = 'translate3d(0,' + strafe  + ',0)';
-            
-            var style = block.style;
+                const style = block.style;
 
-            style.transform = transformString;
-            style.webkitTransform = transformString;
-        },
+                style.transform = transformString;
+                style.webkitTransform = transformString;
+            },
 
-        init: function(wScroll) {
-            //this.move(bg, wScroll, 45);
-            this.move(image, wScroll, 65);
-            this.move(user, wScroll, 45);
-        } 
-    }
+            init: function (wScroll) {
+                //this.move(bg, wScroll, 45);
+                this.move(image, wScroll, 65);
+                this.move(user, wScroll, 45);
+            }
+        };
 
-}());
-
-
+    }());
 
 
-window.onscroll = function () {
-    var wScroll = window.pageYOffset;
-    parallaxScroll.init(wScroll);
+    window.addEventListener('scroll' , function () {
+        const wScroll = window.pageYOffset;
+        parallaxStart.init(wScroll);
+        }
+    );
 }

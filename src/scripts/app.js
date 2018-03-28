@@ -1,8 +1,25 @@
-const mapGoogle = require('./common/map');
-const parallaxIndex = require('./common/parallaxIndex');
-const parallaxScroll = require('./common/parallaxScroll');
-const skills = require('./common/skills');
+import initMap from './common/googleMap';
+import parallaxIndex from './common/parallaxIndex';
+import parallaxScroll from './common/parallaxScroll';
+import skills from './common/skills';
+import flip from './common/flipIndex';
 
 
-const flipIndex = require('./common/flipIndex');
+
+
+if (document.getElementById('parallax__layer')) {
+    parallaxIndex();
+}
+
+if (document.getElementById('btn-auth')) {
+    flip();
+}
+
+if (document.getElementById('scroll-parallax__layer')) {
+    parallaxScroll();
+}
+if (document.getElementById('skills-list')) {
+    skills();
+}
+
 

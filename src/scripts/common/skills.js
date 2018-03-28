@@ -1,13 +1,23 @@
 import Vue from 'vue';
 
-const app = new Vue({
-    data: {
-        skillsFrontend: [
-            { title: 'HTML5' , percents: 90},
-            { title: 'CSS3' , percents: 80},
-            { title: 'JavaScript' , percents: 30}
-        ]
-    }
-});
+export default function skills () {
 
-app.$mount('#skills-list');
+    
+
+    const app = new Vue({
+        data: {
+            skillsFrontend: [
+                { title: 'HTML5', percents: 90 },
+                { title: 'CSS3', percents: 80 },
+                { title: 'JavaScript', percents: 30 }
+            ]
+        }
+    });
+
+    app.$mount('#skills-list');
+
+
+}
+
+
+
