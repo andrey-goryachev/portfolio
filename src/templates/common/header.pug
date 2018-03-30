@@ -15,7 +15,7 @@ mixin header (title, subtitle, determ, classPolygon, classTitle )
                     .user__name(class=classTitle) #{title}
                     .user__info #{subtitle}
             .header__figure.stars_1
-        .header__scroll-btn.arrow-down(class=`header__scroll-btn_${classPolygon}`)
+        .header__scroll-btn.arrow-down#header__scroll-btn(class=`header__scroll-btn_${classPolygon}`)
         if (determ == 'normal')
             .header__rectangle             
                     svg.header__polygon(viewbox="0 0 1000 85" preserveaspectratio="none")

@@ -4,6 +4,7 @@ import parallaxScroll from './common/parallaxScroll';
 import skills from './common/skills';
 import flip from './common/flipIndex';
 import headerMenu from './common/headerMenu';
+import headerArrow from './common/headerArrow';
 
 
 
@@ -23,7 +24,9 @@ if (document.getElementById('scroll-parallax__layer')) {
 if (document.getElementById('about')) {
     skills();
 }
-
-headerMenu();
-
-
+if (document.getElementById('hamburger')) {
+    headerMenu();
+}
+if (document.getElementById('header__scroll-btn')) {
+    headerArrow();
+}
