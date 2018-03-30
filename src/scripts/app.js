@@ -7,6 +7,7 @@ import flip from './common/flipIndex';
 
 
 
+
 if (document.getElementById('parallax__layer')) {
     parallaxIndex();
 }
@@ -18,8 +19,8 @@ if (document.getElementById('btn-auth')) {
 if (document.getElementById('scroll-parallax__layer')) {
     parallaxScroll();
 }
-if (document.getElementById('skills-list')) {
+// if (document.getElementById('skills-row-list')) {
     skills();
-}
+// }
 
 

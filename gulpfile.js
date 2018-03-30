@@ -182,6 +182,6 @@ exports.video = video;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, minimg, scripts, fonts, sprite, video),
+    gulp.parallel(templates, styles, minimg, fonts, sprite, video, scripts),
     gulp.parallel(watch, server)
 ));

@@ -73,9 +73,7 @@
         cursor: pointer;
         transition: all .4s;
     }
-    &_left {
-        left: 9999px;
-    }
+    
     @include desktop {
         top: 25px;
         right: 20px;
@@ -89,6 +87,9 @@
         transform: translateX(-50%);
         font-size: 14px;
         padding: 12px 18px;
+    }
+    &_left {
+        left: 9999px;
     }
 }
 

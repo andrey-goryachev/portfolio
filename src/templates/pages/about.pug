@@ -7,7 +7,7 @@ block variables
 
 block content
     +header('Андрей Горячев', 'Личный сайт веб-разработчика', 'normal')
-    section.about
+    section.about#about
         .about__left
             .about__left-left
                 .about__left-title.big-title Обо мне
@@ -28,9 +28,9 @@ block content
                         .skills-row
                             .skills-row__title Frontend
                             ul.skills-row__list
-                                +skill('', 'HTML5')
+                                +skill('skill-90', 'HTML5')
                                 +skill('skill-80', 'CSS3')
-                                +skill('skill-30', 'JavaScript')
+                                +skill('skill-50', 'JavaScript')
                     li.skills-list__item
                         .skills-row
                             .skills-row__title Backend
@@ -46,6 +46,7 @@ block content
                                 +skill('skill-80', 'Git')
                                 +skill('skill-80', 'Gulp')
                                 +skill('skill-70', 'Bower')
+
     include ../common/map
     +footer
 
