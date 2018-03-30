@@ -4,9 +4,8 @@ mixin header (title, subtitle, determ, classPolygon, classTitle )
             img(src='assets/images/mountains-bg.png').scroll-parallax__image
         .header__socials
             +socials  
-        .hamburger
-        .header-wrap-menu.off
-            .cross
+        .hamburger#hamburger
+        .header-wrap-menu
             +menu('header__menu', 'header__menu-item','header__menu-link')
         .header__title
             .header__user.user

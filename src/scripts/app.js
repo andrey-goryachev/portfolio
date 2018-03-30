@@ -3,6 +3,7 @@ import parallaxIndex from './common/parallaxIndex';
 import parallaxScroll from './common/parallaxScroll';
 import skills from './common/skills';
 import flip from './common/flipIndex';
+import headerMenu from './common/headerMenu';
 
 
 
@@ -19,8 +20,10 @@ if (document.getElementById('btn-auth')) {
 if (document.getElementById('scroll-parallax__layer')) {
     parallaxScroll();
 }
-// if (document.getElementById('skills-row-list')) {
+if (document.getElementById('about')) {
     skills();
-// }
+}
+
+headerMenu();
 
 
