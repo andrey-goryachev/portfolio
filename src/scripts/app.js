@@ -5,6 +5,7 @@ import skills from './common/skills';
 import flip from './common/flipIndex';
 import headerMenu from './common/headerMenu';
 import headerArrow from './common/headerArrow';
+import worksArrowUp from './common/worksArrowUp';
 
 
 
@@ -29,4 +30,8 @@ if (document.getElementById('hamburger')) {
 }
 if (document.getElementById('header__scroll-btn')) {
     headerArrow();
+}
+
+if (document.getElementById('works__btn-up')) {
+    worksArrowUp();
 }

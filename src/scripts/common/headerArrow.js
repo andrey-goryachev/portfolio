@@ -13,6 +13,7 @@ export default function headerArrow () {
                         window.scrollTo(0, wHeight);
                     }
                 })();
+
             };
 
             btn.addEventListener('click', scrollDown);
