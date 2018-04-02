@@ -6,6 +6,7 @@
     grid-template-areas: '. nav blog';
     color: #455a64;
     background-color: #faf8f0;
+    position: relative;
     @include desktop {
         grid-template-columns: ((310/1200)*100%) ((680/1200)*100%);
         grid-column-gap: ((100/1200)*100%);
@@ -17,20 +18,93 @@
         padding: 0 24px;
     }
 }
+
+.blog_nav-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    padding-left: 80px;
+    @include desktop {
+        padding-left: 40px;
+    }
+
+    @include tabletsL {
+        position: absolute;
+        height: 100vh;
+        right: 100%;
+        left: auto;
+        padding: 0;
+        background: #253468;
+    }
+    &_scroll {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 25%;
+        padding-left: 80px;
+        @include desktop {
+            padding-left: 40px;
+        }
+        @include tabletsL {
+            position: fixed;
+            top: 0;
+            // width: 100%;
+            height: 100vh;
+            right: 100%;
+            left: auto;
+            padding: 0;
+            background: #253468;
+        }
+        
+    }
+    &_swipe {
+        @include tabletsL {
+            display: block;
+            height: 100vh;
+            width: 30%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: 0;
+            background: #253468;
+        }
+        @include tablets {
+            width: 50%;
+        }
+    }    
+}
+
 .blog_nav {
     list-style: none;
     margin: 70px 0 0 0;
     padding: 0;
-}
-.nav {
-    grid-area: nav;
-    @include desktop {
-        padding-left: 40px;
+    &::before {
+        content: '';
+        @include tabletsL {
+            display: block;
+            width: 1px;
+            height: 60px;
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            background: transparent;
+            transform: translateX(-50%) translateY(-50%);
+            border: none;
+            border-right: 30px solid #253468;
+            border-radius: 0 60px 60px 0;
+        }
     }
     @include tabletsL {
-        display: none;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        margin: 0;
+        background: #253468;
     }
 }
+
 .nav__item {
     //height: 42px;
     display: flex;
@@ -39,10 +113,16 @@
     margin-bottom: 25px;
     &-active { 
         border-right: 3px solid $blue;
+        @include tabletsL {
+            border-right: none;
+        }
     }
     &-active a {
         color: $blue;
         font-family: $rb;
+        @include tabletsL {
+            color: #fff;
+        }
     }
 }
 
@@ -55,7 +135,12 @@
     line-height: 26px;
     padding-right: 18px;
     box-sizing: border-box;
+    @include tabletsL {
+        font-family: $rr;
+        color: #b5b8c6;
+    }
 }
+
 .blog__list {
     grid-area: blog;
     list-style: none;
@@ -75,7 +160,7 @@
     @include tablets {
         margin-bottom: 50px;
     }
-    &:nth-of-type(2) {
+    &:last-of-type {
         border-bottom: none;
         margin-bottom: 0;
     }
