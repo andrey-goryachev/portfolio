@@ -4,7 +4,7 @@ export default function preloader () {
   const svg = document.querySelector('#preloaderSvg');
   const svgText = document.querySelector('#preloaderText');
   const preloaderWrap = document.querySelector('#preloader');
-  let number = 1;
+  let number = 0;
   const numberAll = imgs.length;
   
 
@@ -16,6 +16,7 @@ export default function preloader () {
         if (number == imgs.length) {
           preloaderWrap.classList.remove('preloader_active');
           preloaderWrap.classList.add('preloader');
+          svgText.innerHTML = '50%';
         }
       });
     }
@@ -24,9 +25,9 @@ export default function preloader () {
     for (let i = 0; i < imgs.length; i++) {
       const img = imgs[i];
       img.addEventListener('load', () => {
-        number = i + 1;
+        number += 1;
         const percentsLoad =number / numberAll * 100;
-        svgText.innerHTML = `${Math.ceil(percentsLoad)}%`;
+        svgText.innerHTML = `${Math.floor(percentsLoad - 10)}%`;
         if (number == imgs.length) {
           setTimeout(() => {
             preloaderWrap.classList.remove('preloader_active');
@@ -35,7 +36,8 @@ export default function preloader () {
             svg.classList.add('preloader__svg');
             svgText.classList.remove('preloader__text_active');
             svgText.classList.add('preloader__text');
-          }, 2000);
+            svgText.innerHTML = '100%';
+          }, 1000);
         }
       });
     }

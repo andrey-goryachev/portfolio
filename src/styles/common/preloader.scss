@@ -14,7 +14,7 @@
     left: 0;
     bottom: 0;
     z-index: 100;
-    background-color: rgba($color: $blue, $alpha: .9);
+    background-color: rgba($color: #183669, $alpha: .9);
   }
 }
 
@@ -85,7 +85,7 @@
 
 @keyframes bgTransparent {
   from {
-    background-color: rgba($color: $blue, $alpha: .9);
+    background-color: rgba($color: #183669, $alpha: .9);
     color: #fff;
     stroke-width: 2px;
     z-index: 100;
