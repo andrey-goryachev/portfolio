@@ -7,9 +7,10 @@ import headerMenu from './common/headerMenu';
 import headerArrow from './common/headerArrow';
 import worksArrowUp from './common/worksArrowUp';
 import blog from './common/blog';
+import preloader from './common/preloader';
 
 
-
+preloader();
 
 if (document.getElementById('parallax__layer')) {
     parallaxIndex();
