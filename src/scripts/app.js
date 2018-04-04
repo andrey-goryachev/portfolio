@@ -8,10 +8,11 @@ import headerArrow from './common/headerArrow';
 import worksArrowUp from './common/worksArrowUp';
 import blog from './common/blog';
 import preloader from './common/preloader';
-import test from './common/test';
+import slider from './common/slider';
 
 
 
+preloader();
 
 if (document.getElementById('parallax__layer')) {
     parallaxIndex();
@@ -42,7 +43,9 @@ if (document.getElementById('blog')) {
     blog();
 }
 
-preloader();
+if (document.getElementById('works')) {
+    slider();
+}
 
-test();
+
 

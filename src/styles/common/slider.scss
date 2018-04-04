@@ -1,7 +1,9 @@
 .slider {
     list-style: none;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
     padding: 0;}
 .slider__item {
     display: none;
@@ -10,6 +12,8 @@
     display: block;
 }
 .slider__img {
-    width: 100%;
-    height: 100%;
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    // height: 10%;
 }
