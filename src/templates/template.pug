@@ -12,7 +12,6 @@ html
         meta(content="ie=edge" http-equiv="x-ua-compatible")
         link(rel="shortcut icon", href="assets/images/favicon.ico", type="image/x-icon")
         link(rel='stylesheet' href='/assets/styles/app.min.css')
-        script(src='./assets/scripts/bundle.js' defer)
     body
             include common/preloader.pug
             include common/header.pug
@@ -21,5 +20,7 @@ html
             include common/menu.pug
             include common/footer.pug
             block content
+            script(src='./assets/scripts/bundle.js' defer)
+
                 
                

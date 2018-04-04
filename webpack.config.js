@@ -20,9 +20,10 @@ const config = {
     },
     resolve: {
         alias: {
-            'vue$': 'vue/dist/vue.esm.js'
+            vue$: 'vue/dist/vue.esm.js'
         }
-    }
+    },
+    devtool: '#eval-source-map'
 };
 
 module.exports = config;
