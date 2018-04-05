@@ -9,6 +9,8 @@ import worksArrowUp from './common/worksArrowUp';
 import blog from './common/blog';
 import preloader from './common/preloader';
 import slider from './common/slider';
+import validationIndex from './common/validationIndex';
+import validationWorks from './common/validationWorks';
 
 
 
@@ -20,6 +22,7 @@ if (document.getElementById('parallax__layer')) {
 
 if (document.getElementById('btn-auth')) {
     flip();
+    validationIndex();
 }
 
 if (document.getElementById('scroll-parallax__layer')) {
@@ -45,6 +48,7 @@ if (document.getElementById('blog')) {
 
 if (document.getElementById('works')) {
     slider();
+    validationWorks();
 }
 
 

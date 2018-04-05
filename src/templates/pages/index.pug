@@ -32,15 +32,17 @@ block content
             .auth-wrap
                 .auth 
                     .auth__title Авторизуйтесь
-                    form.form-auth(action="")
-                        .form-auth__wrap-input
+                    form.form-auth#formAuth(action="", name="authorization")
+                        .form-auth__wrap-input#loginWrap
                             .form-auth__pic.form-auth__pic_login
-                            input.form-auth__txt(type="text", name="", placeholder="Логин")
-                        .form-auth__wrap-input    
+                            input.form-auth__txt(type="text", name="login", placeholder="Логин")
+                            .form-validator#loginValidator Не заполнили
+                        .form-auth__wrap-input#passwordWrap    
                             .form-auth__pic.form-auth__pic_password
-                            input.form-auth__txt(type="password", name="" placeholder="Пароль")
+                            input.form-auth__txt(type="password", name="password" placeholder="Пароль")
+                            .form-validator#passwordValidator Не менее 6 символов
                         label.form-auth__wrap-check
-                                input.form-auth__check(type="checkbox", name="", checked) 
+                                input.form-auth__check(type="checkbox", name="checkbox") 
                                 .form-auth__check-custom
                                 span.form-auth__check-txt(for="form-auth__check") Я человек
                         .form-auth__question Вы точно не робот?
@@ -57,7 +59,7 @@ block content
                     li.form-auth__btn-item
                         a.form-auth__btn-link#btnMain(href="") На главную 
                     li.form-auth__btn-item
-                        a.form-auth__btn-link(href="") Войти 
+                        input.form-auth__btn-link.form-auth__btn(type="button" form="formAuth" name="button" value="Войти")  
         footer.footer-index    
             .footer__text_index © #{name} | создано с любовью в LoftSchool | 2018  
             

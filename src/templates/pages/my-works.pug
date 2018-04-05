@@ -53,16 +53,22 @@ block content
                 .comments__item-author Сабанцев Владимир
                 .comments__item-position — преподаватель
         .comments__wrap-form 
-            form.comments-form.feedback(action="")
+            form.comments-form.feedback#formFeedBack(action="")
                 .comments-form__title.subtitle Связаться со мной
-                input.comments-form__txt-style.comments-form__text(type="text", name="", placeholder="Ваше имя")
-                input.comments-form__txt-style.comments-form__email(type="email", name="", placeholder="Ваш e-mail")
-                textarea.comments-form__txt-style.comments-form__message(name="", placeholder="Ваше сообщение")
+                .comment-form__wrap
+                    input.comments-form__txt-style.comments-form__text(type="text", name="name", placeholder="Ваше имя")
+                    .comments-form-validator#nameValidator Не встречал таких коротких имен
+                .comment-form__wrap
+                    input.comments-form__txt-style.comments-form__email(type="email", name="email", placeholder="Ваш e-mail")
+                    .comments-form-validator#emailValidator Введите корректный e-mail
+                .comment-form__wrap
+                    textarea.comments-form__txt-style.comments-form__message(name="message", placeholder="Ваше сообщение")
+                    .comments-form-validator#messageValidator Напишите немного больше
             ul.comments-form__btn-list
                 li.comments-form__btn-item
-                    input.comments-form__btn(type="button", value="Отправить") 
+                    input.comments-form__btn(type="button", form="formFeedBack", name="button", value="Отправить") 
                 li.comments-form__btn-item
-                    input.comments-form__btn(type="button", value="Очистить") 
+                    input.comments-form__btn(type="reset", form="formFeedBack", value="Очистить") 
         .comments-scroll-btn
             .arrow-up#works__btn-up
     +footer
