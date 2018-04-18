@@ -8,6 +8,7 @@
         display: none;
     }
 }
+
 .parallax {
     position: fixed;
     top: 0;
@@ -73,7 +74,6 @@
         cursor: pointer;
         transition: all .4s;
     }
-    
     @include desktop {
         top: 25px;
         right: 20px;
@@ -101,7 +101,7 @@
     transform-style: preserve-3d;
     transform: rotateY(0deg);
     &_rotate {
-        transform: rotateY(180deg);  
+        transform: rotateY(180deg);
     }
     @include tablets {
         width: 348px;
@@ -112,12 +112,11 @@
 }
 
 // welcome
-
 .welcome {
     position: absolute;
     width: 100%;
     backface-visibility: hidden;
-    
+    transform: rotateY(360deg);
 }
 
 .welcome-wrap {
@@ -168,7 +167,6 @@
     grid-template-columns: 41% 33% 26%;
     grid-template-rows: 45px;
     grid-template-areas: "works about blog"
-
 }
 
 .menu-welcome__btn {
@@ -195,7 +193,8 @@
     &:hover {
         background-color: $blue;
         transition: all .4s;
-    };
+    }
+    ;
     height: 45px;
     line-height: 45px;
     text-align: center;
@@ -205,18 +204,15 @@
     }
 }
 
-
-
 // authorization
-
 .auth-wrap {
     position: absolute;
     width: 100%;
     backface-visibility: hidden;
-    transform:  rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
-.auth {    
+.auth {
     background-color: rgba($color: $gray, $alpha: .5);
     padding: 35px 20px;
     box-sizing: border-box;
@@ -271,11 +267,11 @@
 }
 
 .form-auth__pic_login {
-    background: url(../sprites/login.svg) no-repeat center center;
+    background: url(../images/icons/login.svg) no-repeat center center;
 }
 
 .form-auth__pic_password {
-    background: url(../sprites/password.svg) no-repeat center center;
+    background: url(../images/icons/password.svg) no-repeat center center;
 }
 
 .form-auth__pic {
@@ -306,14 +302,14 @@
 
 .form-auth__check-custom {
     position: relative;
-	width: 20px;
+    width: 20px;
     height: 20px;
     background-color: $blueLight;
     border-radius: 2px;
     margin-right: 10px;
 }
 
-.form-auth__check:checked + .form-auth__check-custom::before {
+.form-auth__check:checked+.form-auth__check-custom::before {
     content: "";
     display: block;
     position: absolute;
@@ -321,7 +317,7 @@
     top: 3px;
     right: 3px;
     bottom: 3px;
-    background: url(../sprites/check.svg) no-repeat center center / contain;
+    background: url(../images/icons/check.svg) no-repeat center center / contain;
 }
 
 .form-auth__question {
@@ -359,7 +355,7 @@
     vertical-align: middle;
 }
 
-.form-auth__radio:checked + .form-auth__radio-custom::before {
+.form-auth__radio:checked+.form-auth__radio-custom::before {
     content: "";
     display: block;
     position: absolute;
