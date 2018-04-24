@@ -4,6 +4,22 @@ block variables
     - var title = 'Горячев Андрей'
     - var name = 'Андрей Горячев'
     - var downNameText = 'Личный сайт веб-разработчика'
+    -
+        var textMenuBtns = [
+            'Мои работы',
+            'Обо мне',
+            'Блог'
+        ]
+        var linksMenuBtns = [
+            'my-works.html',
+            'about.html',
+            'blog.html'
+        ]
+        var classMenuBtns = [
+            'works',
+            'about',
+            'blog'
+        ]
 
 
 block content
@@ -23,12 +39,10 @@ block content
                     +socials
                                 
                 ul.menu-welcome
-                    li.menu-welcome__btn.menu-welcome__btn_works
-                        a.menu-welcome__link(href="my-works.html") Мои работы
-                    li.menu-welcome__btn.menu-welcome__btn_about
-                        a.menu-welcome__link(href="about.html") Обо мне 
-                    li.menu-welcome__btn.menu-welcome__btn_blog
-                        a.menu-welcome__link(href="blog.html") Блог
+                    each item, i in textMenuBtns
+                        li.menu-welcome__btn(class='menu-welcome__btn_'+ classMenuBtns[i])
+                            a.menu-welcome__link(href=linksMenuBtns[i])= item
+
             .auth-wrap
                 .auth 
                     .auth__title Авторизуйтесь

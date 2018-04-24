@@ -1,57 +1,83 @@
 extends ../template
 
+
+
 block variables
     - var title = 'Мои работы'
+    -   
+        //- данные в описании сайта
+        var titlesDesk = [
+            'Сайт магазина гироскутеров',
+            'Сайт кондитерской',
+            'Сайт 3',
+            'Сайт 4'
+        ]
+        var textsDesk = [
+            'Html, Css, jQuery, Javascipt, SCSS, Pug',
+            'Html, CSS, jQuery, Javascipt',
+            'Html, Css',
+            'Html5, Css, Javascipt'
+        ]
+        var linksDesk = [
+            'http://smartbalance-chehov.ru/',
+            'http://1.ag88.ru/',
+            'https://mail.ru/',
+            'https://4pda.ru/'
+        ]
+        //- ссылки на картинки для слайдера
+        var linksSlider = [
+            './assets/images/work-gyro.png',
+            './assets/images/work-cupcake.png',
+            './assets/images/work-3.png',
+            './assets/images/work-4.png'
+        ]
+        //- данные в отзывах
+        var linksComments = [
+            '../assets/images/dima.jpg',
+            '../assets/images/vova.jpg'
+        ]
+        var textsComments = [
+            'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!',
+            'Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!'
+        ]
+        var authorsComments = [
+            'Ковальчук Дмитрий',
+            'Сабанцев Владимир'
+        ]
+        var positionsComments = [
+            '- основатель Loftschool',
+            '- преподаватель'
+        ]
         
 block content
     +header('Андрей Горячев', 'Личный сайт веб-разработчика', 'works', 'works', '')
     section.works#works
         .works-container-left
             ul.works-desc__list
-                li.works-desc__item(v-if="counter == 0", :class='activeClassDesc')
-                    .works-desc__title.subtitle Сайт школы онлайн образования
-                    .works-desc__text Html, Css, Javascipt
-                    a.works-desc__link(href='https://loftschool.com/') Посмотреть сайт
-                li.works-desc__item(v-if="counter == 1", :class='activeClassDesc')
-                    .works-desc__title.subtitle Сайт 2
-                    .works-desc__text Html, Css, Javascipt
-                    a.works-desc__link(href="https://yandex.ru/") Посмотреть сайт
-                li.works-desc__item(v-if="counter == 2", :class='activeClassDesc')
-                    .works-desc__title.subtitle Сайт 3
-                    .works-desc__text Html, Css, Javascipt
-                    a.works-desc__link(href="https://vk.com/") Посмотреть сайт
-                li.works-desc__item(v-if="counter == 3", :class='activeClassDesc')
-                    .works-desc__title.subtitle Сайт 4
-                    .works-desc__text Html, Css, Javascipt
-                    a.works-desc__link(href="https://mail.ru/") Посмотреть сайт
+                each item,index in titlesDesk
+                    li.works-desc__item(v-if='counter ==' + index , :class='activeClassDesc')
+                        .works-desc__title.subtitle= item
+                        .works-desc__text= textsDesk[index]
+                        a.works-desc__link(href=linksDesk[index] target='_blank') Посмотреть сайт
         .works-container-right      
             ul.slider#slides
-                li.slider__item(v-if="counter == 0", :class='activeClassImg')
-                    img.slider__img(src="./assets/images/work-1.png", alt="")
-                li.slider__item(v-if="counter == 1", :class='activeClassImg')
-                    img.slider__img(src="./assets/images/work-2.png", alt="")
-                li.slider__item(v-if="counter == 2", :class='activeClassImg')
-                    img.slider__img(src="./assets/images/work-3.png", alt="")
-                li.slider__item(v-if="counter == 3", :class='activeClassImg')
-                    img.slider__img(src="./assets/images/work-4.png", alt="")
+                each item, index in linksSlider
+                    li.slider__item(v-if="counter ==" + index, :class='activeClassImg')
+                        img.slider__img(src=item, alt=titlesDesk[index])
         .works-buttons
-            .controls#btnPrevious(@click = 'changeBtnsImg', :class='btnLeftClassName + counter')
+            .controls#btnPrevious(@click = 'changeLeftBtnsImg', :class='btnLeftClassName + counter')
                 .btn-arrow-down
-            .controls#btnNext(@click = 'changeBtnsImg', :class='btnRightClassName + counter')
+            .controls#btnNext(@click = 'changeRightBtnsImg', :class='btnRightClassName + counter')
                 .btn-arrow-up
     section.comments
         .comments__title.big-title Что обо мне говорят
         ul.comments__list
-            li.comments__item
-                img.comments__photo(src="../assets/images/dima.jpg", alt="dima")
-                .comments__item-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                .comments__item-author Ковальчук Дмитрий
-                .comments__item-position  — основатель Loftschool
-            li.comments__item
-                img.comments__photo(src="../assets/images/vova.jpg", alt="vova")
-                .comments__item-text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-                .comments__item-author Сабанцев Владимир
-                .comments__item-position — преподаватель
+            each item,i in linksComments
+                li.comments__item
+                    img.comments__photo(src=item, alt="avatar")
+                    .comments__item-text= textsComments[i]
+                    .comments__item-author= authorsComments[i]
+                    .comments__item-position= positionsComments[i]
         .comments__wrap-form 
             form.comments-form.feedback#formFeedBack(action="")
                 .comments-form__title.subtitle Связаться со мной

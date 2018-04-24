@@ -4,6 +4,47 @@ block variables
     - var title = 'Обо мне'
     - var name = 'Андрей Горячев'
     - var downNameText = 'Личный сайт веб-разработчика'
+    -   
+        var skillsTitles = [
+            'Frontend',
+            'Backend',
+            'Workflow',
+        ]
+        //- умения фронт
+        var nameSkillsFront = [
+            'HTML5',
+            'CSS3',
+            'JavaScript',
+        ]
+        var skillsFront = [
+            '90',
+            '80',
+            '50',
+        ]
+        //- умения бэк
+        var nameSkillsBack = [
+            'PHP',
+            'mySQL',
+            'Node.js & npm',
+            'Mongo.db',
+        ]
+        var skillsBack = [
+            '10',
+            '10',
+            '20',
+            '90',
+        ]
+        //- умения с рабочим окружением
+        var nameSkillsWF = [
+            'Git',
+            'Gulp',
+            'Bower',
+        ]
+        var skillsWF = [
+            '80',
+            '80',
+            '70',
+        ]
 
 block content
     +header('Андрей Горячев', 'Личный сайт веб-разработчика', 'normal')
@@ -24,29 +65,20 @@ block content
                 p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
             .about__right-content
                 ul.skills-list#skills-list
-                    li.skills-list__item
-                        .skills-row
-                            .skills-row__title Frontend
-                            ul.skills-row__list
-                                +skill('skill-90', 'HTML5')
-                                +skill('skill-80', 'CSS3')
-                                +skill('skill-50', 'JavaScript')
-                    li.skills-list__item
-                        .skills-row
-                            .skills-row__title Backend
-                            ul.skills-row__list
-                                +skill('skill-10', 'PHP')
-                                +skill('skill-10', 'mySQL')
-                                +skill('skill-20', 'Node.js & npm')
-                                +skill('skill-90', 'Mongo.db')
-                    li.skills-list__item
-                        .skills-row
-                            .skills-row__title Workflow
-                            ul.skills-row__list
-                                +skill('skill-80', 'Git')
-                                +skill('skill-80', 'Gulp')
-                                +skill('skill-70', 'Bower')
-
+                    each item, i in skillsTitles
+                        li.skills-list__item
+                            .skills-row
+                                .skills-row__title= item
+                                ul.skills-row__list
+                                    if (i == 0)
+                                        each item, i in skillsFront
+                                            +skill('skill-'+item, nameSkillsFront[i])
+                                    else if (i == 1)
+                                        each item, i in skillsBack
+                                            +skill('skill-'+item, nameSkillsBack[i])
+                                    else if (i == 2)
+                                        each item, i in skillsWF
+                                            +skill('skill-'+item, nameSkillsWF[i])
     include ../common/map
     +footer
 

@@ -4,22 +4,23 @@ block variables
     - var title = 'Блог'
     - var name = 'Блог'
     - var downNameText = 'Статьи которые я написал'
+    -
+        var titles = [
+            'Самое важное в SASS',
+            'Приёмы в вёрстке, без которых не обходится ни один сайт',
+            'Самый необходимый набор плагинов Gulp',
+            'Почему я выбрал Pug',
+            'Рандомный текст'
+        ]
     
 block content
     +header('Блог', 'Статьи которые я написал', 'normal', 'blog', 'big-title')
     section.blog#blog
         .blog_nav-wrap#navWrap
             ul.blog_nav.nav#navList
-                li.nav__item.nav__item-active
-                    a.nav__link(href="#article1") Самое важное в SASS
-                li.nav__item
-                    a.nav__link(href="#article2") Приёмы в вёрстке, без которых не обходится ни один сайт
-                li.nav__item
-                    a.nav__link(href="#article3") Самый необходимый набор плагинов Gulp
-                li.nav__item
-                    a.nav__link(href="#article4") Почему я выбрал Pug
-                li.nav__item
-                    a.nav__link(href="#article5") Рандомный текст
+                each item, i in titles
+                    li.nav__item.nav__item-active
+                        a.nav__link(href="#article"+(i+1))= item
 
         ul.blog__list#blogList
             li.blog__item_active
